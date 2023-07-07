@@ -8,7 +8,7 @@ Create a pull-request to request the dataset for testing.
 
 |                             |   micro F1 |   macro F1 |   accuracy |
 |:----------------------------|-----------:|-----------:|-----------:|
-| **X-GENRE classifier**  (Kuzman et al. 2023)                   |       0.68 |       0.69 |       0.68 |
+| **XLM-RoBERTa, fine-tuned on the X-GENRE dataset - X-GENRE classifier**  (Kuzman et al. 2023)                   |       0.68 |       0.69 |       0.68 |
 | GPT-4 (7/7/2023)  (Kuzman et al. 2023)            |       0.65 |       0.55 |       0.65 |
 | GPT-3.5-turbo (Kuzman et al. 2023)    |       0.63 |       0.53 |       0.63 |
 | SVM  (Kuzman et al. 2023)                       |       0.49 |       0.51 |       0.49 |
