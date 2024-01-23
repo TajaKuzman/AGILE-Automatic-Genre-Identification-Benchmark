@@ -1,0 +1,19 @@
+All evaluations completed. The results are added to the `results/results.json` file.
+New benchmark scores:
+
+| Model               | Test Dataset   |   Macro F1 |   Micro F1 | Epochs   | Learning Rate   |
+|:--------------------|:---------------|-----------:|-----------:|:---------|:----------------|
+| dummy-stratified    | x-genre-test   |      0.11  |      0.137 |          |                 |
+| dummy-most_frequent | x-genre-test   |      0.036 |      0.193 |          |                 |
+
+------------------------------------------
+
+New benchmark scores:
+
+| Model               | Test Dataset   |   Macro F1 |   Micro F1 | Epochs   | Learning Rate   |
+|:--------------------|:---------------|-----------:|-----------:|:---------|:----------------|
+| dummy-stratified    | en-ginco       |      0.086 |      0.129 |          |                 |
+| dummy-most_frequent | en-ginco       |      0.032 |      0.169 |          |                 |
+
+------------------------------------------
+
