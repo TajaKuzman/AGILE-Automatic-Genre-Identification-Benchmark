@@ -1,20 +1,18 @@
 # AGILE - Automatic Genre Identification Benchmark
 
-A benchmark for evaluating robustness of automatic genre identification models to test their usability for the automatic enrichment of large text collections with genre information.
+A benchmark for evaluating robustness of automatic genre identification models to test their usability for the automatic enrichment of large text collections with genre information. The benchmark is based on manually-annotated English EN-GINCO test dataset.
 
-The benchmark consists of 2 test datasets, manually-annotated with genre (see more details in Section [Datasets](#datasets)):
-- EN-GINCO: English genre dataset
-- X-GENRE test: test split of the Slovenian-English manually-annotated genre dataset X-GENRE, which was used for fine-tuning the XLM-RoBERTa-based X-GENRE classifier
-
-More information on the datasets and the X-GENRE classifier can be found in [`Automatic Genre Identification for Robust Enrichment of Massive Text Collections: Investigation of Classification Methods in the Era of Large Language Models` (Kuzman et al., 2023)](https://www.mdpi.com/2504-4990/5/3/59).
+More information on the dataset and the X-GENRE classifier can be found in [`Automatic Genre Identification for Robust Enrichment of Massive Text Collections: Investigation of Classification Methods in the Era of Large Language Models` (Kuzman et al., 2023)](https://www.mdpi.com/2504-4990/5/3/59).
 
 The X-GENRE classifier, which is state-of-the-art for this task, is freely available at the HuggingFace repository: https://huggingface.co/classla/xlm-roberta-base-multilingual-text-genre-classifier
+
+The test dataset follows the same structure and genre schema as the [X-GENRE dataset](https://huggingface.co/datasets/TajaKuzman/X-GENRE-multilingual-text-genre-dataset) on which the X-GENRE classifier was fined-tuned on.
+
+The EN-GINCO dataset is not publicly available to prevent exposure to LLM models which would make any further evaluation of the capabilities of generative large language models on this test set unreliable. If you wish to contribute to the benchmark, the test dataset will be shared with you upon request.
 
 ## Benchmark scores
 
 Benchmark scores were calculated only once per system. Fine-tuning hyperparameters are listed in the json submission files, where applicable.
-
-### EN-GINCO
 
 |                             |   micro F1 |   macro F1 |   accuracy |
 |:----------------------------|-----------:|-----------:|-----------:|
@@ -29,72 +27,21 @@ Benchmark scores were calculated only once per system. Fine-tuning hyperparamete
 | Zero-Shot classification with `MoritzLaurer/mDeBERTa-v3-base-mnli-xnli` @ HuggingFace                 |       0.2  |       0.15 |       0.2  |
 | Dummy Classifier (stratified) (Kuzman et al. 2023)|       0.14 |       0.1  |       0.14 |
 
-### X-GENRE-test
+## Dataset Details
 
+The EN-GINCO dataset is a sample of the English [enTenTen20](https://www.sketchengine.eu/ententen-english-corpus/) corpus
+that was manually annotated with genres by two expert annotators who previously annotated the Slovenian [GINCO](https://www.clarin.si/repository/xmlui/handle/11356/1467) dataset ([Kuzman et al., 2022](https://aclanthology.org/2022.lrec-1.170.pdf)), and to which the [X-GENRE schema](https://huggingface.co/datasets/TajaKuzman/X-GENRE-multilingual-text-genre-dataset#genre-labels) was mapped.
 
-## Datasets
-
-The datasets for training and testing the models are available for download on Hugging Face: https://huggingface.co/datasets/TajaKuzman/X-GENRE-multilingual-text-genre-dataset
-
-To download them:
-```python
-from datasets import load_dataset
-
-train = load_dataset("TajaKuzman/X-GENRE-multilingual-text-genre-dataset", "train")
-test = load_dataset("TajaKuzman/X-GENRE-multilingual-text-genre-dataset", "test")
-dev = load_dataset("TajaKuzman/X-GENRE-multilingual-text-genre-dataset", "dev")
-EN_GINCO = load_dataset("TajaKuzman/X-GENRE-multilingual-text-genre-dataset", "EN-GINCO")
-
-# To open them as Pandas DataFrame:
-train_df = pd.DataFrame(train["train"])
-```
-
-
- **Dataset sizes**
-
-Dataset sizes in number of instances (texts) and words:
-
-Dataset sizes:
+The dataset consists of around 300 texts and 100.000 words.
 
 | dataset | # words | # texts |
-|---|---|---|
-| X-GENRE-train | 1,940,317 | 1,772 |
-| X-GENRE-test | 583,595 | 592 |
-| X-GENRE-dev | 798,025 | 592 |
+|:---|---:|---:|
 | EN-GINCO | 105,331 | 272 |
-| **Total** | **3,427,268** | **3,228** |
 
-The attributes in datasets are the following:
-- text: text instance
-- labels: genre label
-- dataset: original manually-annotated genre dataset from which the text was obtained (CORE, GINCO, FTD or EN-GINCO)
-- language: language of the text (Slovenian or English)
-- length: the length of the text in number of words
+The texts are annotated with the following 8 genre labels:
 
-
+```
 labels_list=['Other', 'Information/Explanation', 'News', 'Instruction', 'Opinion/Argumentation', 'Forum', 'Prose/Lyrical', 'Legal', 'Promotion']
-
-See more details on the datasets here: https://huggingface.co/datasets/TajaKuzman/X-GENRE-multilingual-text-genre-dataset
-
-An example of how to use the prepared datasets with the simpletransformers library:
-
-```python
-import pandas as pd
-from datasets import load_dataset
-
-# Get all the datasets from the HuggingFace
-train = load_dataset("TajaKuzman/X-GENRE-multilingual-text-genre-dataset", "train")
-test = load_dataset("TajaKuzman/X-GENRE-multilingual-text-genre-dataset", "test")
-dev = load_dataset("TajaKuzman/X-GENRE-multilingual-text-genre-dataset", "dev")
-EN_GINCO = load_dataset("TajaKuzman/X-GENRE-multilingual-text-genre-dataset", "EN-GINCO")
-
-# To open them as Pandas DataFrame:
-train_df = pd.DataFrame(train["train"])
-test_df = pd.DataFrame(test["train"])
-en_ginco = pd.DataFrame(EN_GINCO["train"])
-
-print(train_df.shape, test_df.shape, en_ginco.shape)
-
 ```
 
 ## Contributing to the benchmark
@@ -108,7 +55,7 @@ The results JSON file name should start with `submission-` and the content shoul
     "system": "Pick a name for your system",
     "predictions": [
         {   "train": "what you trained on", # e.g. "X-GENRE-train (train split)"
-            "test": "what you evaluated on",# should be "x-genre-test" or "en-ginco"
+            "test": "what you evaluated on", # should be "en-ginco"
             "predictions": [....] # The length of predictions should match the length of test data
         },
     ],
@@ -132,4 +79,4 @@ The submissions are evaluated using the following code with the path to the subm
 
 The code produces:
 - a JSON file with the results of all tested models: `results/results.json`
-- a table with the results for each of the datasets `results/results-en-ginco.md` and `results/results-x-genre-test.md`
+- a table with the results `results/results-en-ginco.md`
