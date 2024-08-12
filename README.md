@@ -6,7 +6,7 @@ More information on the dataset and the X-GENRE classifier can be found in [`Aut
 
 The X-GENRE classifier, which is state-of-the-art for this task, is freely available at the HuggingFace repository: https://huggingface.co/classla/xlm-roberta-base-multilingual-text-genre-classifier
 
-The test dataset follows the same structure and genre schema as the [X-GENRE dataset](https://huggingface.co/datasets/TajaKuzman/X-GENRE-multilingual-text-genre-dataset) on which the X-GENRE classifier was fined-tuned on.
+The test dataset follows the same structure and genre schema as the [X-GENRE dataset](https://huggingface.co/datasets/TajaKuzman/X-GENRE-text-genre-dataset) on which the X-GENRE classifier was fined-tuned on.
 
 The EN-GINCO dataset is not publicly available to prevent exposure to LLM models which would make any further evaluation of the capabilities of generative large language models on this test set unreliable. If you wish to contribute to the benchmark, the test dataset will be shared with you upon request.
 
@@ -30,7 +30,7 @@ Benchmark scores were calculated only once per system. Fine-tuning hyperparamete
 ## Dataset Details
 
 The EN-GINCO dataset is a sample of the English [enTenTen20](https://www.sketchengine.eu/ententen-english-corpus/) corpus
-that was manually annotated with genres by two expert annotators who previously annotated the Slovenian [GINCO](https://www.clarin.si/repository/xmlui/handle/11356/1467) dataset ([Kuzman et al., 2022](https://aclanthology.org/2022.lrec-1.170.pdf)), and to which the [X-GENRE schema](https://huggingface.co/datasets/TajaKuzman/X-GENRE-multilingual-text-genre-dataset#genre-labels) was mapped.
+that was manually annotated with genres by two expert annotators who previously annotated the Slovenian [GINCO](https://www.clarin.si/repository/xmlui/handle/11356/1467) dataset ([Kuzman et al., 2022](https://aclanthology.org/2022.lrec-1.170.pdf)), and to which the [X-GENRE schema](https://huggingface.co/datasets/TajaKuzman/X-GENRE-text-genre-dataset#genre-labels) was mapped.
 
 The dataset consists of around 300 texts and 100.000 words.
 
