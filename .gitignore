@@ -4,3 +4,5 @@ Code-and-documentation/Test-data/test-file-fasttext.test
 Code-and-documentation/Train-data/x-genre-fasttext.train
 Code-and-documentation/Train-data/X-GENRE-train.csv
 agile_env
+datasets/X-GINCO-test-set/X-GINCO.jsonl
+datasets/EN-GINCO-test-dataset/EN-GINCO.jsonl

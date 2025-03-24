@@ -1,18 +1,26 @@
 # AGILE - Automatic Genre Identification Benchmark
 
-A benchmark for evaluating robustness of automatic genre identification models to test their usability for the automatic enrichment of large text collections with genre information. The benchmark is based on manually-annotated English EN-GINCO test dataset.
+A benchmark for evaluating robustness of automatic genre identification models to test their usability for the automatic enrichment of large text collections with genre information.
 
-More information on the dataset and the X-GENRE classifier can be found in [`Automatic Genre Identification for Robust Enrichment of Massive Text Collections: Investigation of Classification Methods in the Era of Large Language Models` (Kuzman et al., 2023)](https://www.mdpi.com/2504-4990/5/3/59).
+The benchmark is based on two manually-annotated test datasets:
+- [English EN-GINCO test dataset](datasets/EN-GINCO-test-dataset/README.md)
+- [X-GINCO test dataset in 10 European languages](datasets/X-GINCO-test-set/README.md): Albanian, Catalan, Croatian, Greek, Icelandic, Macedonian, Maltese, Slovenian, Turkish, and Ukrainian
+
+Both datasets are available upon request - please write to taja.kuzman@ijs.si to get access to private GitHub repositories where they are deposited.
+
+The datasets are not publicly available to prevent exposure to LLM models which would make any further evaluation of the capabilities of generative large language models on this test set unreliable. If you wish to contribute to the benchmark, the test datasets will be shared with you upon request.
 
 The X-GENRE classifier, which is state-of-the-art for this task, is freely available at the HuggingFace repository: https://huggingface.co/classla/xlm-roberta-base-multilingual-text-genre-classifier
 
-The test dataset follows the same structure and genre schema as the [X-GENRE dataset](https://huggingface.co/datasets/TajaKuzman/X-GENRE-text-genre-dataset) on which the X-GENRE classifier was fined-tuned on.
-
-The EN-GINCO dataset is not publicly available to prevent exposure to LLM models which would make any further evaluation of the capabilities of generative large language models on this test set unreliable. If you wish to contribute to the benchmark, the test dataset will be shared with you upon request.
+The test datasets follow the same structure and genre schema as the [X-GENRE dataset](https://huggingface.co/datasets/TajaKuzman/X-GENRE-text-genre-dataset) on which the X-GENRE classifier was fined-tuned on.
 
 ## Benchmark scores
 
 Benchmark scores were calculated only once per system. Fine-tuning hyperparameters are listed in the json submission files, where applicable.
+
+### EN-GINCO
+
+Performance of the models on the English test dataset:
 
 |                             |   micro F1 |   macro F1 |   accuracy |
 |:----------------------------|-----------:|-----------:|-----------:|
@@ -27,22 +35,140 @@ Benchmark scores were calculated only once per system. Fine-tuning hyperparamete
 | Zero-Shot classification with `MoritzLaurer/mDeBERTa-v3-base-mnli-xnli` @ HuggingFace                 |       0.2  |       0.15 |       0.2  |
 | Dummy Classifier (stratified) (Kuzman et al. 2023)|       0.14 |       0.1  |       0.14 |
 
-## Dataset Details
+### X-GINCO
 
-The EN-GINCO dataset is a sample of the English [enTenTen20](https://www.sketchengine.eu/ententen-english-corpus/) corpus
-that was manually annotated with genres by two expert annotators who previously annotated the Slovenian [GINCO](https://www.clarin.si/repository/xmlui/handle/11356/1467) dataset ([Kuzman et al., 2022](https://aclanthology.org/2022.lrec-1.170.pdf)), and to which the [X-GENRE schema](https://huggingface.co/datasets/TajaKuzman/X-GENRE-text-genre-dataset#genre-labels) was mapped.
+Performance of the models on the multilingual test dataset:
 
-The dataset consists of around 300 texts and 100.000 words.
+| Model               | Test Dataset   |   Macro F1 |   Micro F1 | Epochs   | Learning Rate   |
+|:--------------------|:---------------|-----------:|-----------:|:---------|:----------------|
+| Logistic Regression  | x-ginco        |      0.174 |      0.185 |          |                 |
+| SVC                 | x-ginco        |      0.166 |      0.184 |          |                 |
+| Naive Bayes        | x-ginco        |      0.143 |      0.171 |          |                 |
+| Dummy (stratified)    | x-ginco        |      0.106 |      0.113 |          |                 |
+| Dummy (most frequent) | x-ginco        |      0.029 |      0.133 |          |                 |
 
-| dataset | # words | # texts |
-|:---|---:|---:|
-| EN-GINCO | 105,331 | 272 |
+### Performance on each language
 
-The texts are annotated with the following 8 genre labels:
+#### Albanian
 
-```
-labels_list=['Other', 'Information/Explanation', 'News', 'Instruction', 'Opinion/Argumentation', 'Forum', 'Prose/Lyrical', 'Legal', 'Promotion']
-```
+| Model               | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
+|:--------------------|:---------------|:-----------|-----------:|-----------:|
+| Dummy (stratified)    | x-ginco        | Albanian   |      0.097 |      0.102 |
+| Naive Bayes        | x-ginco        | Albanian   |      0.088 |      0.151 |
+| Logistic Regression  | x-ginco        | Albanian   |      0.058 |      0.15  |
+| SVC                 | x-ginco        | Albanian   |      0.057 |      0.1   |
+| Dummy (most frequent) | x-ginco        | Albanian   |      0.023 |      0.1   |
+
+
+#### Catalan
+
+| Model               | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
+|:--------------------|:---------------|:-----------|-----------:|-----------:|
+| Dummy (stratified)    | x-ginco        | Catalan    |      0.146 |      0.139 |
+| Naive Bayes        | x-ginco        | Catalan    |      0.1   |      0.221 |
+| SVC                 | x-ginco        | Catalan    |      0.077 |      0.112 |
+| Logistic Regression  | x-ginco        | Catalan    |      0.063 |      0.138 |
+| Dummy (most frequent) | x-ginco        | Catalan    |      0.02  |      0.088 |
+
+
+#### Croatian
+
+| Model               | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
+|:--------------------|:---------------|:-----------|-----------:|-----------:|
+| SVC                 | x-ginco        | Croatian   |      0.197 |      0.241 |
+| Naive Bayes        | x-ginco        | Croatian   |      0.139 |      0.214 |
+| Logistic Regression  | x-ginco        | Croatian   |      0.117 |      0.155 |
+| Dummy (stratified)    | x-ginco        | Croatian   |      0.055 |      0.064 |
+| Dummy (most frequent) | x-ginco        | Croatian   |      0.025 |      0.112 |
+
+
+#### English
+
+| Model               | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
+|:--------------------|:---------------|:-----------|-----------:|-----------:|
+| SVC                 | en-ginco       | English    |      0.514 |      0.489 |
+| Logistic Regression  | en-ginco       | English    |      0.464 |      0.471 |
+| Naive Bayes        | en-ginco       | English    |      0.289 |      0.36  |
+| Dummy (stratified)    | en-ginco       | English    |      0.088 |      0.154 |
+| Dummy (most frequent) | en-ginco       | English    |      0.032 |      0.169 |
+
+
+#### Greek
+
+| Model               | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
+|:--------------------|:---------------|:-----------|-----------:|-----------:|
+| Logistic Regression  | x-ginco        | Greek      |      0.223 |      0.238 |
+| SVC                 | x-ginco        | Greek      |      0.159 |      0.175 |
+| Dummy (stratified)    | x-ginco        | Greek      |      0.112 |      0.114 |
+| Naive Bayes        | x-ginco        | Greek      |      0.093 |      0.138 |
+| Dummy (most frequent) | x-ginco        | Greek      |      0.028 |      0.125 |
+
+
+#### Icelandic
+
+| Model               | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
+|:--------------------|:---------------|:-----------|-----------:|-----------:|
+| Dummy (stratified)    | x-ginco        | Icelandic  |      0.145 |      0.167 |
+| Logistic Regression  | x-ginco        | Icelandic  |      0.075 |      0.113 |
+| SVC                 | x-ginco        | Icelandic  |      0.073 |      0.138 |
+| Naive Bayes        | x-ginco        | Icelandic  |      0.059 |      0.169 |
+| Dummy (most frequent) | x-ginco        | Icelandic  |      0.033 |      0.15  |
+
+
+#### Macedonian
+
+| Model               | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
+|:--------------------|:---------------|:-----------|-----------:|-----------:|
+| Naive Bayes        | x-ginco        | Macedonian |      0.144 |      0.164 |
+| Logistic Regression  | x-ginco        | Macedonian |      0.099 |      0.125 |
+| SVC                 | x-ginco        | Macedonian |      0.067 |      0.138 |
+| Dummy (stratified)    | x-ginco        | Macedonian |      0.065 |      0.065 |
+| Dummy (most frequent) | x-ginco        | Macedonian |      0.033 |      0.15  |
+
+
+#### Maltese
+
+| Model               | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
+|:--------------------|:---------------|:-----------|-----------:|-----------:|
+| Dummy (stratified)    | x-ginco        | Maltese    |      0.1   |      0.132 |
+| Naive Bayes        | x-ginco        | Maltese    |      0.092 |      0.1   |
+| SVC                 | x-ginco        | Maltese    |      0.075 |      0.2   |
+| Logistic Regression  | x-ginco        | Maltese    |      0.073 |      0.071 |
+| Dummy (most frequent) | x-ginco        | Maltese    |      0.053 |      0.229 |
+
+
+#### Slovenian
+
+| Model               | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
+|:--------------------|:---------------|:-----------|-----------:|-----------:|
+| Logistic Regression  | x-ginco        | Slovenian  |      0.563 |      0.561 |
+| SVC                 | x-ginco        | Slovenian  |      0.483 |      0.494 |
+| Naive Bayes        | x-ginco        | Slovenian  |      0.214 |      0.3   |
+| Dummy (stratified)    | x-ginco        | Slovenian  |      0.128 |      0.143 |
+| Dummy (most frequent) | x-ginco        | Slovenian  |      0.028 |      0.125 |
+
+
+#### Turkish
+
+| Model               | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
+|:--------------------|:---------------|:-----------|-----------:|-----------:|
+| Dummy (stratified)    | x-ginco        | Turkish    |      0.129 |      0.14  |
+| Logistic Regression  | x-ginco        | Turkish    |      0.096 |      0.125 |
+| Naive Bayes        | x-ginco        | Turkish    |      0.094 |      0.126 |
+| SVC                 | x-ginco        | Turkish    |      0.093 |      0.138 |
+| Dummy (most frequent) | x-ginco        | Turkish    |      0.03  |      0.138 |
+
+
+#### Ukrainian
+
+| Model               | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
+|:--------------------|:---------------|:-----------|-----------:|-----------:|
+| Logistic Regression  | x-ginco        | Ukrainian  |      0.121 |      0.162 |
+| Naive Bayes        | x-ginco        | Ukrainian  |      0.08  |      0.125 |
+| SVC                 | x-ginco        | Ukrainian  |      0.058 |      0.112 |
+| Dummy (stratified)    | x-ginco        | Ukrainian  |      0.056 |      0.064 |
+| Dummy (most frequent) | x-ginco        | Ukrainian  |      0.028 |      0.125 |
+
 
 ## Contributing to the benchmark
 
@@ -79,4 +205,4 @@ The submissions are evaluated using the following code with the path to the subm
 
 The code produces:
 - a JSON file with the results of all tested models: `results/results.json`
-- a table with the results `results/results-en-ginco.md`
+- a table with the results, e.g. `results/results-en-ginco.md`

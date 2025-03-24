@@ -1,89 +1,132 @@
-All evaluations completed. The results are added to the `results/results.json` file.
-New benchmark scores:
 
-| Model               | Test Dataset   |   Macro F1 |   Micro F1 | Epochs   | Learning Rate   |
-|:--------------------|:---------------|-----------:|-----------:|:---------|:----------------|
-| dummy-stratified    | x-ginco        |      0.106 |      0.113 |          |                 |
-| dummy-stratified    | x-ginco        |      0.106 |      0.113 |          |                 |
-| dummy-most_frequent | x-ginco        |      0.029 |      0.133 |          |                 |
-| dummy-most_frequent | x-ginco        |      0.029 |      0.133 |          |                 |
-
-------------------------------------------
-
-New benchmark scores:
-
-| Model               | Test Dataset   |   Macro F1 |   Micro F1 | Epochs   | Learning Rate   |
-|:--------------------|:---------------|-----------:|-----------:|:---------|:----------------|
-| dummy-stratified    | en-ginco       |      0.088 |      0.154 |          |                 |
-| dummy-stratified    | en-ginco       |      0.088 |      0.154 |          |                 |
-| dummy-most_frequent | en-ginco       |      0.032 |      0.169 |          |                 |
-| dummy-most_frequent | en-ginco       |      0.032 |      0.169 |          |                 |
-
-------------------------------------------
+## Albanian
 
 | Model               | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
 |:--------------------|:---------------|:-----------|-----------:|-----------:|
 | dummy-stratified    | x-ginco        | Albanian   |      0.097 |      0.102 |
-| dummy-stratified    | x-ginco        | Albanian   |      0.097 |      0.102 |
+| COMPLEMENTNB        | x-ginco        | Albanian   |      0.088 |      0.151 |
+| LOGISTICREGRESSION  | x-ginco        | Albanian   |      0.058 |      0.15  |
+| SVC                 | x-ginco        | Albanian   |      0.057 |      0.1   |
 | dummy-most_frequent | x-ginco        | Albanian   |      0.023 |      0.1   |
-| dummy-most_frequent | x-ginco        | Albanian   |      0.023 |      0.1   |
+
+------------------------------------------
+
+## Catalan
+
 | Model               | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
 |:--------------------|:---------------|:-----------|-----------:|-----------:|
 | dummy-stratified    | x-ginco        | Catalan    |      0.146 |      0.139 |
-| dummy-stratified    | x-ginco        | Catalan    |      0.146 |      0.139 |
+| COMPLEMENTNB        | x-ginco        | Catalan    |      0.1   |      0.221 |
+| SVC                 | x-ginco        | Catalan    |      0.077 |      0.112 |
+| LOGISTICREGRESSION  | x-ginco        | Catalan    |      0.063 |      0.138 |
 | dummy-most_frequent | x-ginco        | Catalan    |      0.02  |      0.088 |
-| dummy-most_frequent | x-ginco        | Catalan    |      0.02  |      0.088 |
+
+------------------------------------------
+
+## Croatian
+
 | Model               | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
 |:--------------------|:---------------|:-----------|-----------:|-----------:|
-| dummy-stratified    | x-ginco        | Croatian   |      0.055 |      0.064 |
+| SVC                 | x-ginco        | Croatian   |      0.197 |      0.241 |
+| COMPLEMENTNB        | x-ginco        | Croatian   |      0.139 |      0.214 |
+| LOGISTICREGRESSION  | x-ginco        | Croatian   |      0.117 |      0.155 |
 | dummy-stratified    | x-ginco        | Croatian   |      0.055 |      0.064 |
 | dummy-most_frequent | x-ginco        | Croatian   |      0.025 |      0.112 |
-| dummy-most_frequent | x-ginco        | Croatian   |      0.025 |      0.112 |
+
+------------------------------------------
+
+## English
+
 | Model               | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
 |:--------------------|:---------------|:-----------|-----------:|-----------:|
-| dummy-stratified    | en-ginco       | English    |      0.088 |      0.154 |
+| SVC                 | en-ginco       | English    |      0.514 |      0.489 |
+| LOGISTICREGRESSION  | en-ginco       | English    |      0.464 |      0.471 |
+| COMPLEMENTNB        | en-ginco       | English    |      0.289 |      0.36  |
 | dummy-stratified    | en-ginco       | English    |      0.088 |      0.154 |
 | dummy-most_frequent | en-ginco       | English    |      0.032 |      0.169 |
-| dummy-most_frequent | en-ginco       | English    |      0.032 |      0.169 |
+
+------------------------------------------
+
+## Greek
+
 | Model               | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
 |:--------------------|:---------------|:-----------|-----------:|-----------:|
+| LOGISTICREGRESSION  | x-ginco        | Greek      |      0.223 |      0.238 |
+| SVC                 | x-ginco        | Greek      |      0.159 |      0.175 |
 | dummy-stratified    | x-ginco        | Greek      |      0.112 |      0.114 |
-| dummy-stratified    | x-ginco        | Greek      |      0.112 |      0.114 |
+| COMPLEMENTNB        | x-ginco        | Greek      |      0.093 |      0.138 |
 | dummy-most_frequent | x-ginco        | Greek      |      0.028 |      0.125 |
-| dummy-most_frequent | x-ginco        | Greek      |      0.028 |      0.125 |
+
+------------------------------------------
+
+## Icelandic
+
 | Model               | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
 |:--------------------|:---------------|:-----------|-----------:|-----------:|
 | dummy-stratified    | x-ginco        | Icelandic  |      0.145 |      0.167 |
-| dummy-stratified    | x-ginco        | Icelandic  |      0.145 |      0.167 |
+| LOGISTICREGRESSION  | x-ginco        | Icelandic  |      0.075 |      0.113 |
+| SVC                 | x-ginco        | Icelandic  |      0.073 |      0.138 |
+| COMPLEMENTNB        | x-ginco        | Icelandic  |      0.059 |      0.169 |
 | dummy-most_frequent | x-ginco        | Icelandic  |      0.033 |      0.15  |
-| dummy-most_frequent | x-ginco        | Icelandic  |      0.033 |      0.15  |
+
+------------------------------------------
+
+## Macedonian
+
 | Model               | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
 |:--------------------|:---------------|:-----------|-----------:|-----------:|
-| dummy-stratified    | x-ginco        | Macedonian |      0.065 |      0.065 |
+| COMPLEMENTNB        | x-ginco        | Macedonian |      0.144 |      0.164 |
+| LOGISTICREGRESSION  | x-ginco        | Macedonian |      0.099 |      0.125 |
+| SVC                 | x-ginco        | Macedonian |      0.067 |      0.138 |
 | dummy-stratified    | x-ginco        | Macedonian |      0.065 |      0.065 |
 | dummy-most_frequent | x-ginco        | Macedonian |      0.033 |      0.15  |
-| dummy-most_frequent | x-ginco        | Macedonian |      0.033 |      0.15  |
+
+------------------------------------------
+
+## Maltese
+
 | Model               | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
 |:--------------------|:---------------|:-----------|-----------:|-----------:|
 | dummy-stratified    | x-ginco        | Maltese    |      0.1   |      0.132 |
-| dummy-stratified    | x-ginco        | Maltese    |      0.1   |      0.132 |
+| COMPLEMENTNB        | x-ginco        | Maltese    |      0.092 |      0.1   |
+| SVC                 | x-ginco        | Maltese    |      0.075 |      0.2   |
+| LOGISTICREGRESSION  | x-ginco        | Maltese    |      0.073 |      0.071 |
 | dummy-most_frequent | x-ginco        | Maltese    |      0.053 |      0.229 |
-| dummy-most_frequent | x-ginco        | Maltese    |      0.053 |      0.229 |
+
+------------------------------------------
+
+## Slovenian
+
 | Model               | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
 |:--------------------|:---------------|:-----------|-----------:|-----------:|
-| dummy-stratified    | x-ginco        | Slovenian  |      0.128 |      0.143 |
+| LOGISTICREGRESSION  | x-ginco        | Slovenian  |      0.563 |      0.561 |
+| SVC                 | x-ginco        | Slovenian  |      0.483 |      0.494 |
+| COMPLEMENTNB        | x-ginco        | Slovenian  |      0.214 |      0.3   |
 | dummy-stratified    | x-ginco        | Slovenian  |      0.128 |      0.143 |
 | dummy-most_frequent | x-ginco        | Slovenian  |      0.028 |      0.125 |
-| dummy-most_frequent | x-ginco        | Slovenian  |      0.028 |      0.125 |
+
+------------------------------------------
+
+## Turkish
+
 | Model               | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
 |:--------------------|:---------------|:-----------|-----------:|-----------:|
 | dummy-stratified    | x-ginco        | Turkish    |      0.129 |      0.14  |
-| dummy-stratified    | x-ginco        | Turkish    |      0.129 |      0.14  |
+| LOGISTICREGRESSION  | x-ginco        | Turkish    |      0.096 |      0.125 |
+| COMPLEMENTNB        | x-ginco        | Turkish    |      0.094 |      0.126 |
+| SVC                 | x-ginco        | Turkish    |      0.093 |      0.138 |
 | dummy-most_frequent | x-ginco        | Turkish    |      0.03  |      0.138 |
-| dummy-most_frequent | x-ginco        | Turkish    |      0.03  |      0.138 |
+
+------------------------------------------
+
+## Ukrainian
+
 | Model               | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
 |:--------------------|:---------------|:-----------|-----------:|-----------:|
-| dummy-stratified    | x-ginco        | Ukrainian  |      0.056 |      0.064 |
+| LOGISTICREGRESSION  | x-ginco        | Ukrainian  |      0.121 |      0.162 |
+| COMPLEMENTNB        | x-ginco        | Ukrainian  |      0.08  |      0.125 |
+| SVC                 | x-ginco        | Ukrainian  |      0.058 |      0.112 |
 | dummy-stratified    | x-ginco        | Ukrainian  |      0.056 |      0.064 |
 | dummy-most_frequent | x-ginco        | Ukrainian  |      0.028 |      0.125 |
-| dummy-most_frequent | x-ginco        | Ukrainian  |      0.028 |      0.125 |
+
+------------------------------------------

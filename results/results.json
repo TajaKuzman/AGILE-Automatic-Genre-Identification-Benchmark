@@ -1,19 +1,67 @@
 [
   {
-    "Model": "dummy-stratified",
-    "Test Dataset": "x-genre-test",
-    "Macro F1": 0.11036846778033789,
-    "Micro F1": 0.13682432432432431,
+    "Model": "dummy-most_frequent",
+    "Test Dataset": "x-ginco",
+    "Macro F1": 0.029329608938547486,
+    "Micro F1": 0.13291139240506328,
     "Epochs": null,
-    "Learning Rate": null
+    "Learning Rate": null,
+    "Language-Specific Scores": {
+      "Maltese": {
+        "Macro F1": 0.053156146179401995,
+        "Micro F1": 0.22857142857142856
+      },
+      "Greek": {
+        "Macro F1": 0.027777777777777776,
+        "Micro F1": 0.125
+      },
+      "Turkish": {
+        "Macro F1": 0.03021978021978022,
+        "Micro F1": 0.1375
+      },
+      "Albanian": {
+        "Macro F1": 0.022727272727272728,
+        "Micro F1": 0.1
+      },
+      "Icelandic": {
+        "Macro F1": 0.03260869565217391,
+        "Micro F1": 0.15
+      },
+      "Ukrainian": {
+        "Macro F1": 0.027777777777777776,
+        "Micro F1": 0.125
+      },
+      "Catalan": {
+        "Macro F1": 0.020114942528735632,
+        "Micro F1": 0.0875
+      },
+      "Macedonian": {
+        "Macro F1": 0.03260869565217391,
+        "Micro F1": 0.15
+      },
+      "Croatian": {
+        "Macro F1": 0.025280898876404494,
+        "Micro F1": 0.1125
+      },
+      "Slovenian": {
+        "Macro F1": 0.027777777777777776,
+        "Micro F1": 0.125
+      }
+    }
   },
   {
     "Model": "dummy-stratified",
     "Test Dataset": "en-ginco",
-    "Macro F1": 0.0860562733957672,
-    "Micro F1": 0.12867647058823528,
+    "Macro F1": 0.08814298917829817,
+    "Micro F1": 0.15441176470588236,
     "Epochs": null,
-    "Learning Rate": null
+    "Learning Rate": null,
+    "Language-Specific Scores": {
+      "English": {
+        "Macro F1": 0.08814298917829817,
+        "Micro F1": 0.15441176470588236
+      }
+    }
   },
   {
     "Model": "dummy-most_frequent",
@@ -21,14 +69,254 @@
     "Macro F1": 0.03214535290006988,
     "Micro F1": 0.16911764705882354,
     "Epochs": null,
-    "Learning Rate": null
+    "Learning Rate": null,
+    "Language-Specific Scores": {
+      "English": {
+        "Macro F1": 0.03214535290006988,
+        "Micro F1": 0.16911764705882354
+      }
+    }
   },
   {
-    "Model": "dummy-most_frequent",
-    "Test Dataset": "x-genre-test",
-    "Macro F1": 0.03588290840415487,
-    "Micro F1": 0.19256756756756757,
+    "Model": "dummy-stratified",
+    "Test Dataset": "x-ginco",
+    "Macro F1": 0.10574837875866291,
+    "Micro F1": 0.11254851228978008,
     "Epochs": null,
-    "Learning Rate": null
+    "Learning Rate": null,
+    "Language-Specific Scores": {
+      "Maltese": {
+        "Macro F1": 0.10035912919116477,
+        "Micro F1": 0.1323529411764706
+      },
+      "Greek": {
+        "Macro F1": 0.11188149188721272,
+        "Micro F1": 0.11392405063291139
+      },
+      "Turkish": {
+        "Macro F1": 0.12909207486413368,
+        "Micro F1": 0.14012738853503184
+      },
+      "Albanian": {
+        "Macro F1": 0.09717436974789916,
+        "Micro F1": 0.10191082802547771
+      },
+      "Icelandic": {
+        "Macro F1": 0.14532027532599615,
+        "Micro F1": 0.16666666666666666
+      },
+      "Ukrainian": {
+        "Macro F1": 0.05583333333333334,
+        "Micro F1": 0.06369426751592357
+      },
+      "Catalan": {
+        "Macro F1": 0.14584417775207248,
+        "Micro F1": 0.13924050632911392
+      },
+      "Macedonian": {
+        "Macro F1": 0.06494836182336182,
+        "Micro F1": 0.06493506493506493
+      },
+      "Croatian": {
+        "Macro F1": 0.05476190476190476,
+        "Micro F1": 0.0641025641025641
+      },
+      "Slovenian": {
+        "Macro F1": 0.12820662127727345,
+        "Micro F1": 0.14285714285714285
+      }
+    }
+  },
+  {
+    "Model": "SVC",
+    "Test Dataset": "x-ginco",
+    "Macro F1": 0.1662086355098504,
+    "Micro F1": 0.18401015228426396,
+    "Epochs": null,
+    "Learning Rate": null,
+    "Language-Specific Scores": {
+      "Maltese": {
+        "Macro F1": 0.07504848093083387,
+        "Micro F1": 0.2
+      },
+      "Greek": {
+        "Macro F1": 0.1587814914367754,
+        "Micro F1": 0.175
+      },
+      "Turkish": {
+        "Macro F1": 0.09295125164690382,
+        "Micro F1": 0.1375
+      },
+      "Albanian": {
+        "Macro F1": 0.057139208173690934,
+        "Micro F1": 0.1
+      },
+      "Icelandic": {
+        "Macro F1": 0.07341269841269842,
+        "Micro F1": 0.1375
+      },
+      "Ukrainian": {
+        "Macro F1": 0.0578551912568306,
+        "Micro F1": 0.1125
+      },
+      "Catalan": {
+        "Macro F1": 0.07694667474625058,
+        "Micro F1": 0.1125
+      },
+      "Macedonian": {
+        "Macro F1": 0.06723484848484848,
+        "Micro F1": 0.1375
+      },
+      "Croatian": {
+        "Macro F1": 0.19658948507632718,
+        "Micro F1": 0.24050632911392406
+      },
+      "Slovenian": {
+        "Macro F1": 0.4826608187134503,
+        "Micro F1": 0.4936708860759494
+      }
+    }
+  },
+  {
+    "Model": "COMPLEMENTNB",
+    "Test Dataset": "en-ginco",
+    "Macro F1": 0.2892406848289201,
+    "Micro F1": 0.3602941176470588,
+    "Epochs": null,
+    "Learning Rate": null,
+    "Language-Specific Scores": {
+      "English": {
+        "Macro F1": 0.2892406848289201,
+        "Micro F1": 0.3602941176470588
+      }
+    }
+  },
+  {
+    "Model": "LOGISTICREGRESSION",
+    "Test Dataset": "en-ginco",
+    "Macro F1": 0.4639307463824266,
+    "Micro F1": 0.47058823529411764,
+    "Epochs": null,
+    "Learning Rate": null,
+    "Language-Specific Scores": {
+      "English": {
+        "Macro F1": 0.4639307463824266,
+        "Micro F1": 0.47058823529411764
+      }
+    }
+  },
+  {
+    "Model": "LOGISTICREGRESSION",
+    "Test Dataset": "x-ginco",
+    "Macro F1": 0.17369745037068757,
+    "Micro F1": 0.18459579885423297,
+    "Epochs": null,
+    "Learning Rate": null,
+    "Language-Specific Scores": {
+      "Maltese": {
+        "Macro F1": 0.0734126984126984,
+        "Micro F1": 0.07142857142857142
+      },
+      "Greek": {
+        "Macro F1": 0.22338050638108387,
+        "Micro F1": 0.2375
+      },
+      "Turkish": {
+        "Macro F1": 0.09614613734278368,
+        "Micro F1": 0.125
+      },
+      "Albanian": {
+        "Macro F1": 0.05805609915198956,
+        "Micro F1": 0.15
+      },
+      "Icelandic": {
+        "Macro F1": 0.07472943722943723,
+        "Micro F1": 0.11320754716981132
+      },
+      "Ukrainian": {
+        "Macro F1": 0.12107584996304509,
+        "Micro F1": 0.1625
+      },
+      "Catalan": {
+        "Macro F1": 0.06321138211382114,
+        "Micro F1": 0.1375
+      },
+      "Macedonian": {
+        "Macro F1": 0.09878226138188187,
+        "Micro F1": 0.125
+      },
+      "Croatian": {
+        "Macro F1": 0.11686200796107918,
+        "Micro F1": 0.15483870967741936
+      },
+      "Slovenian": {
+        "Macro F1": 0.5631925444696342,
+        "Micro F1": 0.5605095541401274
+      }
+    }
+  },
+  {
+    "Model": "SVC",
+    "Test Dataset": "en-ginco",
+    "Macro F1": 0.5141617409965076,
+    "Micro F1": 0.4889705882352941,
+    "Epochs": null,
+    "Learning Rate": null,
+    "Language-Specific Scores": {
+      "English": {
+        "Macro F1": 0.5141617409965076,
+        "Micro F1": 0.4889705882352941
+      }
+    }
+  },
+  {
+    "Model": "COMPLEMENTNB",
+    "Test Dataset": "x-ginco",
+    "Macro F1": 0.14327336073097527,
+    "Micro F1": 0.170873786407767,
+    "Epochs": null,
+    "Learning Rate": null,
+    "Language-Specific Scores": {
+      "Maltese": {
+        "Macro F1": 0.09168312486284835,
+        "Micro F1": 0.1
+      },
+      "Greek": {
+        "Macro F1": 0.09286803966437833,
+        "Micro F1": 0.13836477987421383
+      },
+      "Turkish": {
+        "Macro F1": 0.0940493166963755,
+        "Micro F1": 0.12578616352201258
+      },
+      "Albanian": {
+        "Macro F1": 0.08780178738161931,
+        "Micro F1": 0.1509433962264151
+      },
+      "Icelandic": {
+        "Macro F1": 0.058920187793427226,
+        "Micro F1": 0.16883116883116883
+      },
+      "Ukrainian": {
+        "Macro F1": 0.07992110256666334,
+        "Micro F1": 0.125
+      },
+      "Catalan": {
+        "Macro F1": 0.0997580850522027,
+        "Micro F1": 0.22058823529411764
+      },
+      "Macedonian": {
+        "Macro F1": 0.14414589034154252,
+        "Micro F1": 0.16352201257861634
+      },
+      "Croatian": {
+        "Macro F1": 0.13920454545454547,
+        "Micro F1": 0.2138364779874214
+      },
+      "Slovenian": {
+        "Macro F1": 0.21352397602397605,
+        "Micro F1": 0.3
+      }
+    }
   }
 ]
