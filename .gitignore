@@ -6,3 +6,4 @@ Code-and-documentation/Train-data/X-GENRE-train.csv
 agile_env
 datasets/X-GINCO-test-set/X-GINCO.jsonl
 datasets/EN-GINCO-test-dataset/EN-GINCO.jsonl
+systems/fasttext/data/
