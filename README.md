@@ -12,13 +12,15 @@ The datasets are not publicly available to prevent exposure to LLM models which 
 
 The X-GENRE classifier, which is state-of-the-art for this task, is freely available at the HuggingFace repository: https://huggingface.co/classla/xlm-roberta-base-multilingual-text-genre-classifier
 
-The test datasets follow the same structure and genre schema as the [X-GENRE dataset](https://huggingface.co/datasets/TajaKuzman/X-GENRE-text-genre-dataset) on which the X-GENRE classifier was fined-tuned on.
+The test datasets follow the same structure and genre schema as the [X-GENRE dataset](https://huggingface.co/datasets/TajaKuzman/X-GENRE-text-genre-dataset) on which the X-GENRE classifier and other neural and non-neural classifiers were trained on.
 
 ## Benchmark scores
 
 Benchmark scores were calculated only once per system. Fine-tuning hyperparameters are listed in the json submission files, where applicable.
 
 ### EN-GINCO
+
+All models that were not used in a zero-shot scenario were trained on the train split of the [X-GENRE dataset](https://huggingface.co/datasets/TajaKuzman/X-GENRE-text-genre-dataset) which comprises manually-annotated instances in Slovenian and English language. As the EN-GINCO test dataset comprises English instances, the performance of the trained models is observed in a cross-dataset scenario. In contrast, the performance of the models that have not been trained on the dataset (GPT models, mt0 model and `mDeBERTa-v3-base-mnli-xnli` model) is observed in a zero-shot scenario.
 
 Performance of the models on the English test dataset:
 
@@ -37,6 +39,8 @@ Performance of the models on the English test dataset:
 
 ### X-GINCO
 
+All models that were not used in a zero-shot scenario were trained on the train split of the [X-GENRE dataset](https://huggingface.co/datasets/TajaKuzman/X-GENRE-text-genre-dataset) which comprises manually-annotated instances in Slovenian and English language. The models are evaluated on a multilingual test dataset that comprises instances in Albanian, Catalan, Croatian, Greek, Icelandic, Macedonian, Maltese, Slovenian, Turkish, and Ukrainian, which means that for all languages except Slovenian the models are evaluated in a zero-shot cross-lingual scenario.
+
 Performance of the models on the multilingual test dataset:
 
 | Model               | Test Dataset   |   Macro F1 |   Micro F1 | Epochs   | Learning Rate   |
@@ -48,6 +52,8 @@ Performance of the models on the multilingual test dataset:
 | Dummy (most frequent) | x-ginco        |      0.029 |      0.133 |          |                 |
 
 ### Performance on each language
+
+The models are evaluated on EN-GINCO and X-GINCO test datasets that comprise instances in Albanian, Catalan, Croatian, Greek, English, Icelandic, Macedonian, Maltese, Slovenian, Turkish, and Ukrainian, which means that for all languages except Slovenian and English, the models are evaluated in a zero-shot cross-lingual scenario, since they have been trained on an English-Slovenian training dataset (X-GENRE dataset).
 
 #### Albanian
 
