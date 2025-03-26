@@ -3,8 +3,8 @@
 A benchmark for evaluating robustness of automatic genre identification models to test their usability for the automatic enrichment of large text collections with genre information.
 
 The benchmark is based on two manually-annotated test datasets:
-- [English EN-GINCO test dataset](datasets/EN-GINCO-test-dataset/README.md)
-- [X-GINCO test dataset in 10 European languages](datasets/X-GINCO-test-set/README.md): Albanian, Catalan, Croatian, Greek, Icelandic, Macedonian, Maltese, Slovenian, Turkish, and Ukrainian
+- English EN-GINCO test dataset
+- X-GINCO test dataset in 10 European languages: Albanian, Catalan, Croatian, Greek, Icelandic, Macedonian, Maltese, Slovenian, Turkish, and Ukrainian
 
 Both datasets are available upon request - please write to taja.kuzman@ijs.si to get access to private GitHub repositories where they are deposited.
 
