@@ -1,5 +1,39 @@
+All evaluations completed. The results are added to the `results/results.json` file.
+New benchmark scores:
 
-#### Albanian
+| Model                    | Test Dataset   |   Macro F1 |   Micro F1 | Epochs   | Learning Rate   |
+|:-------------------------|:---------------|-----------:|-----------:|:---------|:----------------|
+| X-GENRE classifier       | x-ginco        |      0.847 |      0.845 |          |                 |
+| gpt-4o-2024-08-06        | x-ginco        |      0.776 |      0.769 |          |                 |
+| gpt-4o-mini-2024-07-18   | x-ginco        |      0.688 |      0.67  |          |                 |
+| CORE register classifier | x-ginco        |      0.651 |      0.652 |          |                 |
+| gpt-3.5-turbo-0125       | x-ginco        |      0.627 |      0.622 |          |                 |
+| LOGISTICREGRESSION       | x-ginco        |      0.174 |      0.185 |          |                 |
+| SVC                      | x-ginco        |      0.166 |      0.184 |          |                 |
+| fastText                 | x-ginco        |      0.156 |      0.179 |          |                 |
+| COMPLEMENTNB             | x-ginco        |      0.143 |      0.171 |          |                 |
+| dummy-stratified         | x-ginco        |      0.106 |      0.113 |          |                 |
+| dummy-most_frequent      | x-ginco        |      0.029 |      0.133 |          |                 |
+
+------------------------------------------
+
+New benchmark scores:
+
+| Model                    | Test Dataset   |   Macro F1 |   Micro F1 | Epochs   | Learning Rate   |
+|:-------------------------|:---------------|-----------:|-----------:|:---------|:----------------|
+| X-GENRE classifier       | en-ginco       |      0.687 |      0.684 |          |                 |
+| gpt-4o-2024-08-06        | en-ginco       |      0.62  |      0.735 |          |                 |
+| CORE register classifier | en-ginco       |      0.545 |      0.588 |          |                 |
+| gpt-4o-mini-2024-07-18   | en-ginco       |      0.534 |      0.632 |          |                 |
+| SVC                      | en-ginco       |      0.514 |      0.489 |          |                 |
+| gpt-3.5-turbo-0125       | en-ginco       |      0.494 |      0.625 |          |                 |
+| LOGISTICREGRESSION       | en-ginco       |      0.464 |      0.471 |          |                 |
+| fastText                 | en-ginco       |      0.408 |      0.445 |          |                 |
+| COMPLEMENTNB             | en-ginco       |      0.289 |      0.36  |          |                 |
+| dummy-stratified         | en-ginco       |      0.088 |      0.154 |          |                 |
+| dummy-most_frequent      | en-ginco       |      0.032 |      0.169 |          |                 |
+
+------------------------------------------
 
 | Model                    | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
 |:-------------------------|:---------------|:-----------|-----------:|-----------:|
@@ -14,11 +48,6 @@
 | SVC                      | x-ginco        | Albanian   |      0.057 |      0.1   |
 | fastText                 | x-ginco        | Albanian   |      0.024 |      0.062 |
 | dummy-most_frequent      | x-ginco        | Albanian   |      0.023 |      0.1   |
-
-------------------------------------------
-
-#### Catalan
-
 | Model                    | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
 |:-------------------------|:---------------|:-----------|-----------:|-----------:|
 | X-GENRE classifier       | x-ginco        | Catalan    |      0.786 |      0.785 |
@@ -32,11 +61,6 @@
 | LOGISTICREGRESSION       | x-ginco        | Catalan    |      0.063 |      0.138 |
 | fastText                 | x-ginco        | Catalan    |      0.063 |      0.138 |
 | dummy-most_frequent      | x-ginco        | Catalan    |      0.02  |      0.088 |
-
-------------------------------------------
-
-#### Croatian
-
 | Model                    | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
 |:-------------------------|:---------------|:-----------|-----------:|-----------:|
 | X-GENRE classifier       | x-ginco        | Croatian   |      0.894 |      0.9   |
@@ -50,11 +74,6 @@
 | LOGISTICREGRESSION       | x-ginco        | Croatian   |      0.117 |      0.155 |
 | dummy-stratified         | x-ginco        | Croatian   |      0.055 |      0.064 |
 | dummy-most_frequent      | x-ginco        | Croatian   |      0.025 |      0.112 |
-
-------------------------------------------
-
-#### English
-
 | Model                    | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
 |:-------------------------|:---------------|:-----------|-----------:|-----------:|
 | X-GENRE classifier       | en-ginco       | English    |      0.687 |      0.684 |
@@ -68,11 +87,6 @@
 | COMPLEMENTNB             | en-ginco       | English    |      0.289 |      0.36  |
 | dummy-stratified         | en-ginco       | English    |      0.088 |      0.154 |
 | dummy-most_frequent      | en-ginco       | English    |      0.032 |      0.169 |
-
-------------------------------------------
-
-#### Greek
-
 | Model                    | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
 |:-------------------------|:---------------|:-----------|-----------:|-----------:|
 | X-GENRE classifier       | x-ginco        | Greek      |      0.783 |      0.8   |
@@ -86,11 +100,6 @@
 | fastText                 | x-ginco        | Greek      |      0.095 |      0.138 |
 | COMPLEMENTNB             | x-ginco        | Greek      |      0.093 |      0.138 |
 | dummy-most_frequent      | x-ginco        | Greek      |      0.028 |      0.125 |
-
-------------------------------------------
-
-#### Icelandic
-
 | Model                    | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
 |:-------------------------|:---------------|:-----------|-----------:|-----------:|
 | gpt-4o-2024-08-06        | x-ginco        | Icelandic  |      0.795 |      0.8   |
@@ -104,11 +113,6 @@
 | COMPLEMENTNB             | x-ginco        | Icelandic  |      0.059 |      0.169 |
 | fastText                 | x-ginco        | Icelandic  |      0.052 |      0.105 |
 | dummy-most_frequent      | x-ginco        | Icelandic  |      0.033 |      0.15  |
-
-------------------------------------------
-
-#### Macedonian
-
 | Model                    | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
 |:-------------------------|:---------------|:-----------|-----------:|-----------:|
 | X-GENRE classifier       | x-ginco        | Macedonian |      0.911 |      0.912 |
@@ -122,11 +126,6 @@
 | SVC                      | x-ginco        | Macedonian |      0.067 |      0.138 |
 | dummy-stratified         | x-ginco        | Macedonian |      0.065 |      0.065 |
 | dummy-most_frequent      | x-ginco        | Macedonian |      0.033 |      0.15  |
-
-------------------------------------------
-
-#### Maltese
-
 | Model                    | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
 |:-------------------------|:---------------|:-----------|-----------:|-----------:|
 | gpt-4o-2024-08-06        | x-ginco        | Maltese    |      0.545 |      0.786 |
@@ -140,11 +139,6 @@
 | LOGISTICREGRESSION       | x-ginco        | Maltese    |      0.073 |      0.071 |
 | dummy-most_frequent      | x-ginco        | Maltese    |      0.053 |      0.229 |
 | CORE register classifier | x-ginco        | Maltese    |      0     |      0     |
-
-------------------------------------------
-
-#### Slovenian
-
 | Model                    | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
 |:-------------------------|:---------------|:-----------|-----------:|-----------:|
 | X-GENRE classifier       | x-ginco        | Slovenian  |      0.936 |      0.938 |
@@ -158,11 +152,6 @@
 | COMPLEMENTNB             | x-ginco        | Slovenian  |      0.214 |      0.3   |
 | dummy-stratified         | x-ginco        | Slovenian  |      0.128 |      0.143 |
 | dummy-most_frequent      | x-ginco        | Slovenian  |      0.028 |      0.125 |
-
-------------------------------------------
-
-#### Turkish
-
 | Model                    | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
 |:-------------------------|:---------------|:-----------|-----------:|-----------:|
 | X-GENRE classifier       | x-ginco        | Turkish    |      0.916 |      0.917 |
@@ -176,11 +165,6 @@
 | SVC                      | x-ginco        | Turkish    |      0.093 |      0.138 |
 | fastText                 | x-ginco        | Turkish    |      0.092 |      0.126 |
 | dummy-most_frequent      | x-ginco        | Turkish    |      0.03  |      0.138 |
-
-------------------------------------------
-
-#### Ukrainian
-
 | Model                    | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
 |:-------------------------|:---------------|:-----------|-----------:|-----------:|
 | X-GENRE classifier       | x-ginco        | Ukrainian  |      0.945 |      0.949 |
@@ -194,5 +178,3 @@
 | SVC                      | x-ginco        | Ukrainian  |      0.058 |      0.112 |
 | dummy-stratified         | x-ginco        | Ukrainian  |      0.056 |      0.064 |
 | dummy-most_frequent      | x-ginco        | Ukrainian  |      0.028 |      0.125 |
-
-------------------------------------------

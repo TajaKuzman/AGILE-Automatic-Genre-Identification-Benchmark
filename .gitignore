@@ -7,3 +7,5 @@ agile_env
 datasets/X-GINCO-test-set/X-GINCO.jsonl
 datasets/EN-GINCO-test-dataset/EN-GINCO.jsonl
 systems/fasttext/data/
+systems/fasttext/v0.9.2
+systems/OpenAI-GPT/API_key
