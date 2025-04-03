@@ -133,7 +133,7 @@ def results_table(result_df, dataset):
     dataset_df["Macro F1"] = dataset_df["Macro F1"].round(3)
 
     dataset_df["Micro F1"] = dataset_df["Micro F1"].round(3)
-    dataset_df.drop(columns=["Language-Specific Scores"], inplace=True)
+    dataset_df.drop(columns=["Language-Specific Scores", "Epochs", "Learning Rate"], inplace=True)
 
     print(dataset_df.to_markdown(index=False))
 
@@ -144,9 +144,6 @@ for dataset in ["x-ginco", "en-ginco"]:
     print("New benchmark scores:\n")
 
     current_df = results_table(result_df, dataset)
-    
-    # Drop column "language-specific scores"
-    current_df
     
     print("\n------------------------------------------\n")
 
@@ -185,6 +182,7 @@ def results_table_lang(lang_results_df, lang):
     dataset_df["Macro F1"] = dataset_df["Macro F1"].round(3)
 
     dataset_df["Micro F1"] = dataset_df["Micro F1"].round(3)
+    
 
     print(dataset_df.to_markdown(index=False))
 
