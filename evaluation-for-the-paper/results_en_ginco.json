@@ -1,0 +1,24 @@
+{"Model":"fastText","English (macro-F1)":0.4587497966,"English (micro-F1)":0.4743083004}
+{"Model":"COMPLEMENTNB","English (macro-F1)":0.3363960034,"English (micro-F1)":0.3798449612}
+{"Model":"LOGISTICREGRESSION","English (macro-F1)":0.5085631171,"English (micro-F1)":0.4941176471}
+{"Model":"SVC","English (macro-F1)":0.5718479589,"English (micro-F1)":0.511627907}
+{"Model":"X-GENRE classifier (without Mix label for lower confidence)","English (macro-F1)":0.7519196907,"English (micro-F1)":0.7100591716}
+{"Model":"deepseek-r1:14b","English (macro-F1)":0.3190032711,"English (micro-F1)":0.2753246753}
+{"Model":"qwen3:32b","English (macro-F1)":0.5332205396,"English (micro-F1)":0.6317829457}
+{"Model":"GaMS-9B-Instruct","English (macro-F1)":0.2866607317,"English (micro-F1)":0.382892057}
+{"Model":"gemma3:27b","English (macro-F1)":0.623836133,"English (micro-F1)":0.70703125}
+{"Model":"llama4:scout","English (macro-F1)":0.4571636322,"English (micro-F1)":0.4379844961}
+{"Model":"llama3.3:latest","English (macro-F1)":0.6488683542,"English (micro-F1)":0.7109375}
+{"Model":"gemma2:27b","English (macro-F1)":0.6353385106,"English (micro-F1)":0.6352941176}
+{"Model":"NLI zero-shot model ([mDeBERTa-v3-base-mnli-xnli](https:\/\/huggingface.co\/MoritzLaurer\/mDeBERTa-v3-base-mnli-xnli))","English (macro-F1)":0.1597009131,"English (micro-F1)":0.231292517}
+{"Model":"gpt-5-nano-2025-08-07","English (macro-F1)":0.6391610646,"English (micro-F1)":0.7093023256}
+{"Model":"gpt-4o-2024-08-06","English (macro-F1)":0.7369323833,"English (micro-F1)":0.7713178295}
+{"Model":"gpt-5","English (macro-F1)":0.7587859186,"English (micro-F1)":0.8}
+{"Model":"gpt-5-mini-2025-08-07","English (macro-F1)":0.7613575294,"English (micro-F1)":0.7844660194}
+{"Model":"gpt-3.5-turbo-0125","English (macro-F1)":0.5362216927,"English (micro-F1)":0.65234375}
+{"Model":"gpt-4o-mini-2024-07-18","English (macro-F1)":0.6658751662,"English (micro-F1)":0.6627906977}
+{"Model":"dummy-stratified","English (macro-F1)":0.1017403247,"English (micro-F1)":0.1663366337}
+{"Model":"dummy-most_frequent","English (macro-F1)":0.0378289474,"English (micro-F1)":0.1782945736}
+{"Model":"google\/gemini-2.5-flash","English (macro-F1)":0.7441107115,"English (micro-F1)":0.7674418605}
+{"Model":"mistralai\/mistral-medium-3.1","English (macro-F1)":0.7214835449,"English (micro-F1)":0.7209302326}
+{"Model":"CORE register classifier","English (macro-F1)":0.5925707863,"English (micro-F1)":0.6129032258}
