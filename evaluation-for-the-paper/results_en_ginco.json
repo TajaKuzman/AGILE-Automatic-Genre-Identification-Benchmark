@@ -19,6 +19,7 @@
 {"Model":"gpt-4o-mini-2024-07-18","English (macro-F1)":0.6658751662,"English (micro-F1)":0.6627906977}
 {"Model":"dummy-stratified","English (macro-F1)":0.1017403247,"English (micro-F1)":0.1663366337}
 {"Model":"dummy-most_frequent","English (macro-F1)":0.0378289474,"English (micro-F1)":0.1782945736}
+{"Model":"google\/gemini-2.5-pro","English (macro-F1)":0.7326532608,"English (micro-F1)":0.7797270955}
 {"Model":"google\/gemini-2.5-flash","English (macro-F1)":0.7441107115,"English (micro-F1)":0.7674418605}
 {"Model":"mistralai\/mistral-medium-3.1","English (macro-F1)":0.7214835449,"English (micro-F1)":0.7209302326}
 {"Model":"CORE register classifier","English (macro-F1)":0.5925707863,"English (micro-F1)":0.6129032258}

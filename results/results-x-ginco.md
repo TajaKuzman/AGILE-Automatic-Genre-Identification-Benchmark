@@ -2,7 +2,8 @@
 
 | Model                                                                                                                                             | Test Dataset   |   Macro F1 |   Micro F1 |
 |:--------------------------------------------------------------------------------------------------------------------------------------------------|:---------------|-----------:|-----------:|
-| [X-GENRE classifier](https://huggingface.co/classla/xlm-roberta-base-multilingual-text-genre-classifier)  | x-ginco        |      0.848 |      0.845 |
+| [X-GENRE classifier](https://huggingface.co/classla/xlm-roberta-base-multilingual-text-genre-classifier) (without Mix label for lower confidence) | x-ginco        |      0.848 |      0.845 |
+| Gemini 2.5 Pro                                                                                                                                    | x-ginco        |      0.785 |      0.783 |
 | GPT-4o (gpt-4o-2024-08-06) (zero-shot)                                                                                                            | x-ginco        |      0.776 |      0.769 |
 | GPT-5-mini (gpt-5-mini-2025-08-07) (zero-shot)                                                                                                    | x-ginco        |      0.771 |      0.764 |
 | GPT-5 (gpt-5-2025-08-07) (zero-shot)                                                                                                              | x-ginco        |      0.77  |      0.768 |

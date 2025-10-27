@@ -3,10 +3,11 @@
 
 | Model                                                                                                                                             | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
 |:--------------------------------------------------------------------------------------------------------------------------------------------------|:---------------|:-----------|-----------:|-----------:|
-| [X-GENRE classifier](https://huggingface.co/classla/xlm-roberta-base-multilingual-text-genre-classifier) | x-ginco        | Albanian   |      0.854 |      0.85  |
+| [X-GENRE classifier](https://huggingface.co/classla/xlm-roberta-base-multilingual-text-genre-classifier) (without Mix label for lower confidence) | x-ginco        | Albanian   |      0.854 |      0.85  |
 | Gemma 3 (27B) (zero-shot)                                                                                                                         | x-ginco        | Albanian   |      0.787 |      0.785 |
 | GPT-5-nano (gpt-5-nano-2025-08-07) (zero-shot)                                                                                                    | x-ginco        | Albanian   |      0.774 |      0.775 |
 | GPT-4o (gpt-4o-2024-08-06) (zero-shot)                                                                                                            | x-ginco        | Albanian   |      0.771 |      0.767 |
+| Gemini 2.5 Pro                                                                                                                                    | x-ginco        | Albanian   |      0.769 |      0.767 |
 | GPT-4o-mini (gpt-4o-mini-2024-07-18) (zero-shot)                                                                                                  | x-ginco        | Albanian   |      0.769 |      0.762 |
 | GPT-5-mini (gpt-5-mini-2025-08-07) (zero-shot)                                                                                                    | x-ginco        | Albanian   |      0.751 |      0.75  |
 | Mistral Medium 3.1 (zero-shot)                                                                                                                    | x-ginco        | Albanian   |      0.748 |      0.75  |
@@ -34,13 +35,14 @@
 
 | Model                                                                                                                                             | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
 |:--------------------------------------------------------------------------------------------------------------------------------------------------|:---------------|:-----------|-----------:|-----------:|
-| [X-GENRE classifier](https://huggingface.co/classla/xlm-roberta-base-multilingual-text-genre-classifier) | x-ginco        | Catalan    |      0.788 |      0.788 |
+| [X-GENRE classifier](https://huggingface.co/classla/xlm-roberta-base-multilingual-text-genre-classifier) (without Mix label for lower confidence) | x-ginco        | Catalan    |      0.788 |      0.788 |
 | GPT-5-mini (gpt-5-mini-2025-08-07) (zero-shot)                                                                                                    | x-ginco        | Catalan    |      0.788 |      0.762 |
 | GPT-4o (gpt-4o-2024-08-06) (zero-shot)                                                                                                            | x-ginco        | Catalan    |      0.769 |      0.75  |
 | Llama 3.3 (70B) (zero-shot)                                                                                                                       | x-ginco        | Catalan    |      0.766 |      0.75  |
 | Gemma 3 (27B) (zero-shot)                                                                                                                         | x-ginco        | Catalan    |      0.762 |      0.755 |
 | GPT-5 (gpt-5-2025-08-07) (zero-shot)                                                                                                              | x-ginco        | Catalan    |      0.76  |      0.75  |
 | GPT-5-nano (gpt-5-nano-2025-08-07) (zero-shot)                                                                                                    | x-ginco        | Catalan    |      0.76  |      0.738 |
+| Gemini 2.5 Pro                                                                                                                                    | x-ginco        | Catalan    |      0.742 |      0.725 |
 | Gemini 2.5 Flash (zero-shot)                                                                                                                      | x-ginco        | Catalan    |      0.725 |      0.692 |
 | Mistral Medium 3.1 (zero-shot)                                                                                                                    | x-ginco        | Catalan    |      0.718 |      0.712 |
 | GPT-4o-mini (gpt-4o-mini-2024-07-18) (zero-shot)                                                                                                  | x-ginco        | Catalan    |      0.701 |      0.688 |
@@ -65,7 +67,8 @@
 
 | Model                                                                                                                                             | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
 |:--------------------------------------------------------------------------------------------------------------------------------------------------|:---------------|:-----------|-----------:|-----------:|
-| [X-GENRE classifier](https://huggingface.co/classla/xlm-roberta-base-multilingual-text-genre-classifier)  | x-ginco        | Croatian   |      0.894 |      0.9   |
+| [X-GENRE classifier](https://huggingface.co/classla/xlm-roberta-base-multilingual-text-genre-classifier) (without Mix label for lower confidence) | x-ginco        | Croatian   |      0.894 |      0.9   |
+| Gemini 2.5 Pro                                                                                                                                    | x-ginco        | Croatian   |      0.795 |      0.805 |
 | GPT-4o (gpt-4o-2024-08-06) (zero-shot)                                                                                                            | x-ginco        | Croatian   |      0.783 |      0.8   |
 | GPT-5 (gpt-5-2025-08-07) (zero-shot)                                                                                                              | x-ginco        | Croatian   |      0.757 |      0.775 |
 | GPT-5-mini (gpt-5-mini-2025-08-07) (zero-shot)                                                                                                    | x-ginco        | Croatian   |      0.75  |      0.762 |
@@ -97,10 +100,11 @@
 | Model                                                                                                                                             | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
 |:--------------------------------------------------------------------------------------------------------------------------------------------------|:---------------|:-----------|-----------:|-----------:|
 | GPT-5-mini (gpt-5-mini-2025-08-07) (zero-shot)                                                                                                    | en-ginco       | English    |      0.688 |      0.75  |
-| [X-GENRE classifier](https://huggingface.co/classla/xlm-roberta-base-multilingual-text-genre-classifier)  | en-ginco       | English    |      0.686 |      0.684 |
+| [X-GENRE classifier](https://huggingface.co/classla/xlm-roberta-base-multilingual-text-genre-classifier) (without Mix label for lower confidence) | en-ginco       | English    |      0.686 |      0.684 |
 | Gemini 2.5 Flash (zero-shot)                                                                                                                      | en-ginco       | English    |      0.655 |      0.735 |
 | GPT-5 (gpt-5-2025-08-07) (zero-shot)                                                                                                              | en-ginco       | English    |      0.653 |      0.761 |
 | GPT-4o (gpt-4o-2024-08-06) (zero-shot)                                                                                                            | en-ginco       | English    |      0.62  |      0.735 |
+| Gemini 2.5 Pro                                                                                                                                    | en-ginco       | English    |      0.618 |      0.739 |
 | Mistral Medium 3.1 (zero-shot)                                                                                                                    | en-ginco       | English    |      0.599 |      0.688 |
 | Llama 3.3 (70B) (zero-shot)                                                                                                                       | en-ginco       | English    |      0.586 |      0.684 |
 | Gemma 2 (27B) (zero-shot)                                                                                                                         | en-ginco       | English    |      0.564 |      0.603 |
@@ -129,7 +133,8 @@
 |:--------------------------------------------------------------------------------------------------------------------------------------------------|:---------------|:-----------|-----------:|-----------:|
 | GPT-5-mini (gpt-5-mini-2025-08-07) (zero-shot)                                                                                                    | x-ginco        | Greek      |      0.818 |      0.818 |
 | GPT-5 (gpt-5-2025-08-07) (zero-shot)                                                                                                              | x-ginco        | Greek      |      0.811 |      0.812 |
-| [X-GENRE classifier](https://huggingface.co/classla/xlm-roberta-base-multilingual-text-genre-classifier)  | x-ginco        | Greek      |      0.802 |      0.818 |
+| [X-GENRE classifier](https://huggingface.co/classla/xlm-roberta-base-multilingual-text-genre-classifier) (without Mix label for lower confidence) | x-ginco        | Greek      |      0.802 |      0.818 |
+| Gemini 2.5 Pro                                                                                                                                    | x-ginco        | Greek      |      0.783 |      0.8   |
 | GPT-5-nano (gpt-5-nano-2025-08-07) (zero-shot)                                                                                                    | x-ginco        | Greek      |      0.756 |      0.762 |
 | GPT-4o-mini (gpt-4o-mini-2024-07-18) (zero-shot)                                                                                                  | x-ginco        | Greek      |      0.74  |      0.762 |
 | GPT-4o (gpt-4o-2024-08-06) (zero-shot)                                                                                                            | x-ginco        | Greek      |      0.739 |      0.762 |
@@ -159,9 +164,10 @@
 | Model                                                                                                                                             | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
 |:--------------------------------------------------------------------------------------------------------------------------------------------------|:---------------|:-----------|-----------:|-----------:|
 | GPT-5 (gpt-5-2025-08-07) (zero-shot)                                                                                                              | x-ginco        | Icelandic  |      0.847 |      0.855 |
+| Gemini 2.5 Pro                                                                                                                                    | x-ginco        | Icelandic  |      0.821 |      0.838 |
 | GPT-5-mini (gpt-5-mini-2025-08-07) (zero-shot)                                                                                                    | x-ginco        | Icelandic  |      0.802 |      0.818 |
 | GPT-4o (gpt-4o-2024-08-06) (zero-shot)                                                                                                            | x-ginco        | Icelandic  |      0.795 |      0.8   |
-| [X-GENRE classifier](https://huggingface.co/classla/xlm-roberta-base-multilingual-text-genre-classifier)| x-ginco        | Icelandic  |      0.775 |      0.78  |
+| [X-GENRE classifier](https://huggingface.co/classla/xlm-roberta-base-multilingual-text-genre-classifier) (without Mix label for lower confidence) | x-ginco        | Icelandic  |      0.775 |      0.78  |
 | Gemini 2.5 Flash (zero-shot)                                                                                                                      | x-ginco        | Icelandic  |      0.748 |      0.755 |
 | Llama 3.3 (70B) (zero-shot)                                                                                                                       | x-ginco        | Icelandic  |      0.745 |      0.75  |
 | GPT-5-nano (gpt-5-nano-2025-08-07) (zero-shot)                                                                                                    | x-ginco        | Icelandic  |      0.708 |      0.7   |
@@ -189,10 +195,11 @@
 
 | Model                                                                                                                                             | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
 |:--------------------------------------------------------------------------------------------------------------------------------------------------|:---------------|:-----------|-----------:|-----------:|
-| [X-GENRE classifier](https://huggingface.co/classla/xlm-roberta-base-multilingual-text-genre-classifier)  | x-ginco        | Macedonian |      0.911 |      0.912 |
+| [X-GENRE classifier](https://huggingface.co/classla/xlm-roberta-base-multilingual-text-genre-classifier) (without Mix label for lower confidence) | x-ginco        | Macedonian |      0.911 |      0.912 |
 | Gemma 3 (27B) (zero-shot)                                                                                                                         | x-ginco        | Macedonian |      0.748 |      0.762 |
 | GPT-4o (gpt-4o-2024-08-06) (zero-shot)                                                                                                            | x-ginco        | Macedonian |      0.722 |      0.738 |
 | GPT-5 (gpt-5-2025-08-07) (zero-shot)                                                                                                              | x-ginco        | Macedonian |      0.708 |      0.7   |
+| Gemini 2.5 Pro                                                                                                                                    | x-ginco        | Macedonian |      0.684 |      0.692 |
 | Mistral Medium 3.1 (zero-shot)                                                                                                                    | x-ginco        | Macedonian |      0.683 |      0.7   |
 | Llama 3.3 (70B) (zero-shot)                                                                                                                       | x-ginco        | Macedonian |      0.674 |      0.688 |
 | Gemini 2.5 Flash (zero-shot)                                                                                                                      | x-ginco        | Macedonian |      0.671 |      0.667 |
@@ -221,11 +228,12 @@
 | Model                                                                                                                                             | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
 |:--------------------------------------------------------------------------------------------------------------------------------------------------|:---------------|:-----------|-----------:|-----------:|
 | Llama 3.3 (70B) (zero-shot)                                                                                                                       | x-ginco        | Maltese    |      0.642 |      0.8   |
+| Gemini 2.5 Pro                                                                                                                                    | x-ginco        | Maltese    |      0.571 |      0.835 |
 | Mistral Medium 3.1 (zero-shot)                                                                                                                    | x-ginco        | Maltese    |      0.545 |      0.7   |
 | GPT-4o (gpt-4o-2024-08-06) (zero-shot)                                                                                                            | x-ginco        | Maltese    |      0.545 |      0.786 |
 | GPT-5 (gpt-5-2025-08-07) (zero-shot)                                                                                                              | x-ginco        | Maltese    |      0.534 |      0.8   |
 | GPT-4o-mini (gpt-4o-mini-2024-07-18) (zero-shot)                                                                                                  | x-ginco        | Maltese    |      0.527 |      0.791 |
-| [X-GENRE classifier](https://huggingface.co/classla/xlm-roberta-base-multilingual-text-genre-classifier) | x-ginco        | Maltese    |      0.51  |      0.58  |
+| [X-GENRE classifier](https://huggingface.co/classla/xlm-roberta-base-multilingual-text-genre-classifier) (without Mix label for lower confidence) | x-ginco        | Maltese    |      0.51  |      0.58  |
 | GPT-5-mini (gpt-5-mini-2025-08-07) (zero-shot)                                                                                                    | x-ginco        | Maltese    |      0.506 |      0.786 |
 | GPT-5-nano (gpt-5-nano-2025-08-07) (zero-shot)                                                                                                    | x-ginco        | Maltese    |      0.499 |      0.771 |
 | Gemini 2.5 Flash (zero-shot)                                                                                                                      | x-ginco        | Maltese    |      0.493 |      0.743 |
@@ -251,11 +259,12 @@
 
 | Model                                                                                                                                             | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
 |:--------------------------------------------------------------------------------------------------------------------------------------------------|:---------------|:-----------|-----------:|-----------:|
-| [X-GENRE classifier](https://huggingface.co/classla/xlm-roberta-base-multilingual-text-genre-classifier)  | x-ginco        | Slovenian  |      0.936 |      0.938 |
+| [X-GENRE classifier](https://huggingface.co/classla/xlm-roberta-base-multilingual-text-genre-classifier) (without Mix label for lower confidence) | x-ginco        | Slovenian  |      0.936 |      0.938 |
 | GPT-5-nano (gpt-5-nano-2025-08-07) (zero-shot)                                                                                                    | x-ginco        | Slovenian  |      0.771 |      0.775 |
 | Gemini 2.5 Flash (zero-shot)                                                                                                                      | x-ginco        | Slovenian  |      0.755 |      0.755 |
 | GPT-5-mini (gpt-5-mini-2025-08-07) (zero-shot)                                                                                                    | x-ginco        | Slovenian  |      0.738 |      0.762 |
 | Mistral Medium 3.1 (zero-shot)                                                                                                                    | x-ginco        | Slovenian  |      0.729 |      0.738 |
+| Gemini 2.5 Pro                                                                                                                                    | x-ginco        | Slovenian  |      0.705 |      0.726 |
 | GPT-5 (gpt-5-2025-08-07) (zero-shot)                                                                                                              | x-ginco        | Slovenian  |      0.704 |      0.717 |
 | Llama 3.3 (70B) (zero-shot)                                                                                                                       | x-ginco        | Slovenian  |      0.704 |      0.712 |
 | GPT-4o (gpt-4o-2024-08-06) (zero-shot)                                                                                                            | x-ginco        | Slovenian  |      0.695 |      0.7   |
@@ -282,7 +291,8 @@
 
 | Model                                                                                                                                             | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
 |:--------------------------------------------------------------------------------------------------------------------------------------------------|:---------------|:-----------|-----------:|-----------:|
-| [X-GENRE classifier](https://huggingface.co/classla/xlm-roberta-base-multilingual-text-genre-classifier)  | x-ginco        | Turkish    |      0.911 |      0.912 |
+| [X-GENRE classifier](https://huggingface.co/classla/xlm-roberta-base-multilingual-text-genre-classifier) (without Mix label for lower confidence) | x-ginco        | Turkish    |      0.911 |      0.912 |
+| Gemini 2.5 Pro                                                                                                                                    | x-ginco        | Turkish    |      0.849 |      0.85  |
 | GPT-4o (gpt-4o-2024-08-06) (zero-shot)                                                                                                            | x-ginco        | Turkish    |      0.815 |      0.812 |
 | Llama 3.3 (70B) (zero-shot)                                                                                                                       | x-ginco        | Turkish    |      0.79  |      0.788 |
 | GPT-5-mini (gpt-5-mini-2025-08-07) (zero-shot)                                                                                                    | x-ginco        | Turkish    |      0.772 |      0.762 |
@@ -313,8 +323,9 @@
 
 | Model                                                                                                                                             | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
 |:--------------------------------------------------------------------------------------------------------------------------------------------------|:---------------|:-----------|-----------:|-----------:|
-| [X-GENRE classifier](https://huggingface.co/classla/xlm-roberta-base-multilingual-text-genre-classifier) | x-ginco        | Ukrainian  |      0.933 |      0.938 |
+| [X-GENRE classifier](https://huggingface.co/classla/xlm-roberta-base-multilingual-text-genre-classifier) (without Mix label for lower confidence) | x-ginco        | Ukrainian  |      0.933 |      0.938 |
 | GPT-5 (gpt-5-2025-08-07) (zero-shot)                                                                                                              | x-ginco        | Ukrainian  |      0.806 |      0.8   |
+| Gemini 2.5 Pro                                                                                                                                    | x-ginco        | Ukrainian  |      0.803 |      0.797 |
 | GPT-5-mini (gpt-5-mini-2025-08-07) (zero-shot)                                                                                                    | x-ginco        | Ukrainian  |      0.794 |      0.788 |
 | GPT-5-nano (gpt-5-nano-2025-08-07) (zero-shot)                                                                                                    | x-ginco        | Ukrainian  |      0.784 |      0.775 |
 | GPT-4o (gpt-4o-2024-08-06) (zero-shot)                                                                                                            | x-ginco        | Ukrainian  |      0.782 |      0.775 |

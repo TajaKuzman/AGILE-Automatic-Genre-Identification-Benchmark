@@ -78,7 +78,8 @@ for submission_file in submission_files:
                  "gpt-5-nano-2025-08-07": "GPT-5-nano (gpt-5-nano-2025-08-07) (zero-shot)",
                  "google/gemini-2.5-flash": "Gemini 2.5 Flash (zero-shot)",
                  "mistralai/mistral-medium-3.1": "Mistral Medium 3.1 (zero-shot)",
-                 "X-GENRE classifier (without Mix label for lower confidence)": "[X-GENRE classifier](https://huggingface.co/classla/xlm-roberta-base-multilingual-text-genre-classifier) (without Mix label for lower confidence)"
+                 "X-GENRE classifier (without Mix label for lower confidence)": "[X-GENRE classifier](https://huggingface.co/classla/xlm-roberta-base-multilingual-text-genre-classifier) (without Mix label for lower confidence)",
+                 "google/gemini-2.5-pro": "Gemini 2.5 Pro"
             }
             try:
                 model_name = model_dict[model]
