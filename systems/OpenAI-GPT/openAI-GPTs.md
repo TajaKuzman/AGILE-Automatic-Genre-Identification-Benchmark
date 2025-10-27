@@ -4,6 +4,9 @@ We evaluate the following models:
 - GPT-4o ("gpt-4o-2024-08-06"),
 - GPT-3.5-Turbo ("gpt-3.5-turbo-0125"),
 - GPT-4o-mini ("gpt-4o-mini-2024-07-18")
+- GPT-5 ("gpt-5-2025-08-07")
+- GPT-5-nano ("gpt-5-nano-2025-08-07")
+- GPT-5-mini ("gpt-5-mini-2025-08-07")
 
 We use the following prompt:
 ```json

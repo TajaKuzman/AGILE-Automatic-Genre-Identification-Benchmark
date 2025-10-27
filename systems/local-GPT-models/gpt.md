@@ -6,7 +6,8 @@ The following models were evaluated:
 - [Gemma 3 (27B model)](https://ollama.com/library/gemma3) `gemma3:27b`
 - [Gemma 2 (27B model)](https://ollama.com/library/gemma2) `gemma2:27b`
 - [DeepSeek-R1 (14B model)](https://ollama.com/library/deepseek-r1) `deepseek-r1:14b`
-- [Llama 3.3 model (70B modek)](https://ollama.com/library/llama3.3) `llama3.3:latest`
+- [Llama 3.3 model (70B model)](https://ollama.com/library/llama3.3) `llama3.3:latest`
+- [GaMS-Instruct model (9B model)](https://huggingface.co/cjvt/GaMS-9B-Instruct) `GaMS-9B-Instruct:latest`
 
 The prompt:
 ```python

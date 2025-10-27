@@ -68,6 +68,22 @@ for submission_file in submission_files:
 
             # Get information on the dataset and the model
             model = results["system"]
+            
+            # Rename the model
+            model_dict = {
+                 "qwen3:32b": "Qwen3 (32B) (zero-shot)",
+                 "llama4:scout": "Llama 4 - Scout (zero-shot)",
+                 "gpt-5": "GPT-5 (gpt-5-2025-08-07) (zero-shot)",
+                 "gpt-5-mini-2025-08-07": "GPT-5-mini (gpt-5-mini-2025-08-07) (zero-shot)",
+                 "gpt-5-nano-2025-08-07": "GPT-5-nano (gpt-5-nano-2025-08-07) (zero-shot)",
+                 "google/gemini-2.5-flash": "Gemini 2.5 Flash (zero-shot)",
+                 "mistralai/mistral-medium-3.1": "Mistral Medium 3.1 (zero-shot)",
+                 "X-GENRE classifier (without Mix label for lower confidence)": "[X-GENRE classifier](https://huggingface.co/classla/xlm-roberta-base-multilingual-text-genre-classifier) (without Mix label for lower confidence)"
+            }
+            try:
+                model_name = model_dict[model]
+            except:
+                model_name = model
 
             dataset_name = results["predictions"][0]["test"]
 
@@ -103,7 +119,7 @@ for submission_file in submission_files:
                 current_scores_lang = testing(y_true_lang, y_pred_lang, labels_lang)
                 language_results_dict[lang] = {"Macro F1": float(current_scores_lang["Macro F1"]), "Micro F1": float(current_scores_lang["Micro F1"])}
 
-            current_res_dict = {"Model": model, "Test Dataset": dataset_name, "Macro F1": current_scores["Macro F1"], "Micro F1": current_scores["Micro F1"], "Epochs": epochs, "Learning Rate": lr, "Language-Specific Scores": language_results_dict}
+            current_res_dict = {"Model": model_name, "Test Dataset": dataset_name, "Macro F1": current_scores["Macro F1"], "Micro F1": current_scores["Micro F1"], "Epochs": epochs, "Learning Rate": lr, "Language-Specific Scores": language_results_dict}
 
             # Add the results to all results
             results_list.append(current_res_dict)
