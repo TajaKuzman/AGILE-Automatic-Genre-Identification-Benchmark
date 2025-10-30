@@ -9,21 +9,25 @@ We evaluate the following models:
 - GPT-5-mini ("gpt-5-mini-2025-08-07")
 
 We use the following prompt:
-```json
-			messages= [
-			{
-				"role": "user",
-				"content": f"""
-				### Task
-				Your task is to classify the following text according to genre. Genres are text types, defined by the function of the text, author’s purpose and form of the text. Always provide a label, even if you are not sure.
+```python
+		completion = client.chat.completions.create(model=gpt_model,
+		response_format= {"type": "json_object"},
+		messages= [
+		{
+			"role": "user",
+			"content": f"""
+			### Task
+			Your task is to classify the following text according to genre. Genres are text types, defined by the function of the text, author’s purpose and form of the text. Always provide a label, even if you are not sure.
 
-				### Output format
-					Return a valid JSON dictionary with the following key: 'genre' and a value should be an integer which represents one of the labels according to the following dictionary: {labels_dict}.
+			### Output format
+				Return a valid JSON dictionary with the following key: 'genre' and a value should be an integer which represents one of the labels according to the following dictionary: {label_dict_with_description_ext}.
 
-					
-					Text: '{text}'
-			"""
-				}
+				
+				Text: '{text}'
+		"""
+			}
+		],
+		temperature = 0)
 ```
 
-The evaluation of the three models on the X-GINCO and EN-GINCO dataset cost 3.27$.
+The evaluation of the 3.5, 4o and 4o-mini models on the X-GINCO and EN-GINCO dataset cost 3.27$.

@@ -1,89 +1,84 @@
+en-ginco
+Removing 'Other' instances
+Dataset shape:
+(258, 5)
+en-ginco
+Removing 'Other' instances
+Dataset shape:
+(258, 5)
 All evaluations completed. The results are added to the `results/results.json` file.
 New benchmark scores:
 
-| Model               | Test Dataset   |   Macro F1 |   Micro F1 | Epochs   | Learning Rate   |
-|:--------------------|:---------------|-----------:|-----------:|:---------|:----------------|
-| dummy-stratified    | x-ginco        |      0.106 |      0.113 |          |                 |
-| dummy-stratified    | x-ginco        |      0.106 |      0.113 |          |                 |
-| dummy-most_frequent | x-ginco        |      0.029 |      0.133 |          |                 |
-| dummy-most_frequent | x-ginco        |      0.029 |      0.133 |          |                 |
+| Model                    | Test Dataset   |   Macro F1 |   Micro F1 |
+|:-------------------------|:---------------|-----------:|-----------:|
+| CORE register classifier | x-ginco        |      0.651 |      0.652 |
+| dummy-stratified         | x-ginco        |      0.106 |      0.113 |
+| dummy-most_frequent      | x-ginco        |      0.029 |      0.133 |
 
 ------------------------------------------
 
 New benchmark scores:
 
-| Model               | Test Dataset   |   Macro F1 |   Micro F1 | Epochs   | Learning Rate   |
-|:--------------------|:---------------|-----------:|-----------:|:---------|:----------------|
-| dummy-stratified    | en-ginco       |      0.088 |      0.154 |          |                 |
-| dummy-stratified    | en-ginco       |      0.088 |      0.154 |          |                 |
-| dummy-most_frequent | en-ginco       |      0.032 |      0.169 |          |                 |
-| dummy-most_frequent | en-ginco       |      0.032 |      0.169 |          |                 |
+| Model                    | Test Dataset   |   Macro F1 |   Micro F1 |
+|:-------------------------|:---------------|-----------:|-----------:|
+| CORE register classifier | en-ginco       |      0.593 |      0.613 |
+| dummy-stratified         | en-ginco       |      0.102 |      0.166 |
+| dummy-most_frequent      | en-ginco       |      0.038 |      0.178 |
 
 ------------------------------------------
 
-| Model               | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
-|:--------------------|:---------------|:-----------|-----------:|-----------:|
-| dummy-stratified    | x-ginco        | Albanian   |      0.097 |      0.102 |
-| dummy-stratified    | x-ginco        | Albanian   |      0.097 |      0.102 |
-| dummy-most_frequent | x-ginco        | Albanian   |      0.023 |      0.1   |
-| dummy-most_frequent | x-ginco        | Albanian   |      0.023 |      0.1   |
-| Model               | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
-|:--------------------|:---------------|:-----------|-----------:|-----------:|
-| dummy-stratified    | x-ginco        | Catalan    |      0.146 |      0.139 |
-| dummy-stratified    | x-ginco        | Catalan    |      0.146 |      0.139 |
-| dummy-most_frequent | x-ginco        | Catalan    |      0.02  |      0.088 |
-| dummy-most_frequent | x-ginco        | Catalan    |      0.02  |      0.088 |
-| Model               | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
-|:--------------------|:---------------|:-----------|-----------:|-----------:|
-| dummy-stratified    | x-ginco        | Croatian   |      0.055 |      0.064 |
-| dummy-stratified    | x-ginco        | Croatian   |      0.055 |      0.064 |
-| dummy-most_frequent | x-ginco        | Croatian   |      0.025 |      0.112 |
-| dummy-most_frequent | x-ginco        | Croatian   |      0.025 |      0.112 |
-| Model               | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
-|:--------------------|:---------------|:-----------|-----------:|-----------:|
-| dummy-stratified    | en-ginco       | English    |      0.088 |      0.154 |
-| dummy-stratified    | en-ginco       | English    |      0.088 |      0.154 |
-| dummy-most_frequent | en-ginco       | English    |      0.032 |      0.169 |
-| dummy-most_frequent | en-ginco       | English    |      0.032 |      0.169 |
-| Model               | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
-|:--------------------|:---------------|:-----------|-----------:|-----------:|
-| dummy-stratified    | x-ginco        | Greek      |      0.112 |      0.114 |
-| dummy-stratified    | x-ginco        | Greek      |      0.112 |      0.114 |
-| dummy-most_frequent | x-ginco        | Greek      |      0.028 |      0.125 |
-| dummy-most_frequent | x-ginco        | Greek      |      0.028 |      0.125 |
-| Model               | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
-|:--------------------|:---------------|:-----------|-----------:|-----------:|
-| dummy-stratified    | x-ginco        | Icelandic  |      0.145 |      0.167 |
-| dummy-stratified    | x-ginco        | Icelandic  |      0.145 |      0.167 |
-| dummy-most_frequent | x-ginco        | Icelandic  |      0.033 |      0.15  |
-| dummy-most_frequent | x-ginco        | Icelandic  |      0.033 |      0.15  |
-| Model               | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
-|:--------------------|:---------------|:-----------|-----------:|-----------:|
-| dummy-stratified    | x-ginco        | Macedonian |      0.065 |      0.065 |
-| dummy-stratified    | x-ginco        | Macedonian |      0.065 |      0.065 |
-| dummy-most_frequent | x-ginco        | Macedonian |      0.033 |      0.15  |
-| dummy-most_frequent | x-ginco        | Macedonian |      0.033 |      0.15  |
-| Model               | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
-|:--------------------|:---------------|:-----------|-----------:|-----------:|
-| dummy-stratified    | x-ginco        | Maltese    |      0.1   |      0.132 |
-| dummy-stratified    | x-ginco        | Maltese    |      0.1   |      0.132 |
-| dummy-most_frequent | x-ginco        | Maltese    |      0.053 |      0.229 |
-| dummy-most_frequent | x-ginco        | Maltese    |      0.053 |      0.229 |
-| Model               | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
-|:--------------------|:---------------|:-----------|-----------:|-----------:|
-| dummy-stratified    | x-ginco        | Slovenian  |      0.128 |      0.143 |
-| dummy-stratified    | x-ginco        | Slovenian  |      0.128 |      0.143 |
-| dummy-most_frequent | x-ginco        | Slovenian  |      0.028 |      0.125 |
-| dummy-most_frequent | x-ginco        | Slovenian  |      0.028 |      0.125 |
-| Model               | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
-|:--------------------|:---------------|:-----------|-----------:|-----------:|
-| dummy-stratified    | x-ginco        | Turkish    |      0.129 |      0.14  |
-| dummy-stratified    | x-ginco        | Turkish    |      0.129 |      0.14  |
-| dummy-most_frequent | x-ginco        | Turkish    |      0.03  |      0.138 |
-| dummy-most_frequent | x-ginco        | Turkish    |      0.03  |      0.138 |
-| Model               | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
-|:--------------------|:---------------|:-----------|-----------:|-----------:|
-| dummy-stratified    | x-ginco        | Ukrainian  |      0.056 |      0.064 |
-| dummy-stratified    | x-ginco        | Ukrainian  |      0.056 |      0.064 |
-| dummy-most_frequent | x-ginco        | Ukrainian  |      0.028 |      0.125 |
-| dummy-most_frequent | x-ginco        | Ukrainian  |      0.028 |      0.125 |
+| Model                    | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
+|:-------------------------|:---------------|:-----------|-----------:|-----------:|
+| CORE register classifier | x-ginco        | Albanian   |      0.709 |      0.728 |
+| dummy-stratified         | x-ginco        | Albanian   |      0.097 |      0.102 |
+| dummy-most_frequent      | x-ginco        | Albanian   |      0.023 |      0.1   |
+| Model                    | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
+|:-------------------------|:---------------|:-----------|-----------:|-----------:|
+| CORE register classifier | x-ginco        | Catalan    |      0.662 |      0.642 |
+| dummy-stratified         | x-ginco        | Catalan    |      0.146 |      0.139 |
+| dummy-most_frequent      | x-ginco        | Catalan    |      0.02  |      0.088 |
+| Model                    | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
+|:-------------------------|:---------------|:-----------|-----------:|-----------:|
+| CORE register classifier | x-ginco        | Croatian   |      0.616 |      0.632 |
+| dummy-stratified         | x-ginco        | Croatian   |      0.055 |      0.064 |
+| dummy-most_frequent      | x-ginco        | Croatian   |      0.025 |      0.112 |
+| Model                    | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
+|:-------------------------|:---------------|:-----------|-----------:|-----------:|
+| CORE register classifier | en-ginco       | English    |      0.593 |      0.613 |
+| dummy-stratified         | en-ginco       | English    |      0.102 |      0.166 |
+| dummy-most_frequent      | en-ginco       | English    |      0.038 |      0.178 |
+| Model                    | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
+|:-------------------------|:---------------|:-----------|-----------:|-----------:|
+| CORE register classifier | x-ginco        | Greek      |      0.716 |      0.718 |
+| dummy-stratified         | x-ginco        | Greek      |      0.112 |      0.114 |
+| dummy-most_frequent      | x-ginco        | Greek      |      0.028 |      0.125 |
+| Model                    | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
+|:-------------------------|:---------------|:-----------|-----------:|-----------:|
+| CORE register classifier | x-ginco        | Icelandic  |      0.556 |      0.584 |
+| dummy-stratified         | x-ginco        | Icelandic  |      0.145 |      0.167 |
+| dummy-most_frequent      | x-ginco        | Icelandic  |      0.033 |      0.15  |
+| Model                    | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
+|:-------------------------|:---------------|:-----------|-----------:|-----------:|
+| CORE register classifier | x-ginco        | Macedonian |      0.637 |      0.675 |
+| dummy-stratified         | x-ginco        | Macedonian |      0.065 |      0.065 |
+| dummy-most_frequent      | x-ginco        | Macedonian |      0.033 |      0.15  |
+| Model                    | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
+|:-------------------------|:---------------|:-----------|-----------:|-----------:|
+| dummy-stratified         | x-ginco        | Maltese    |      0.1   |      0.132 |
+| dummy-most_frequent      | x-ginco        | Maltese    |      0.053 |      0.229 |
+| CORE register classifier | x-ginco        | Maltese    |      0     |      0     |
+| Model                    | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
+|:-------------------------|:---------------|:-----------|-----------:|-----------:|
+| CORE register classifier | x-ginco        | Slovenian  |      0.679 |      0.684 |
+| dummy-stratified         | x-ginco        | Slovenian  |      0.128 |      0.143 |
+| dummy-most_frequent      | x-ginco        | Slovenian  |      0.028 |      0.125 |
+| Model                    | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
+|:-------------------------|:---------------|:-----------|-----------:|-----------:|
+| CORE register classifier | x-ginco        | Turkish    |      0.71  |      0.721 |
+| dummy-stratified         | x-ginco        | Turkish    |      0.129 |      0.14  |
+| dummy-most_frequent      | x-ginco        | Turkish    |      0.03  |      0.138 |
+| Model                    | Test Dataset   | Language   |   Macro F1 |   Micro F1 |
+|:-------------------------|:---------------|:-----------|-----------:|-----------:|
+| CORE register classifier | x-ginco        | Ukrainian  |      0.769 |      0.784 |
+| dummy-stratified         | x-ginco        | Ukrainian  |      0.056 |      0.064 |
+| dummy-most_frequent      | x-ginco        | Ukrainian  |      0.028 |      0.125 |

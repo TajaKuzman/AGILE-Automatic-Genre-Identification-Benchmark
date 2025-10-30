@@ -3,8 +3,8 @@
 A benchmark for evaluating robustness of automatic genre identification models to test their usability for the automatic enrichment of large text collections with genre information.
 
 The benchmark is based on two manually-annotated test datasets:
-- English EN-GINCO test dataset
-- X-GINCO test dataset in 10 European languages: Albanian, Catalan, Croatian, Greek, Icelandic, Macedonian, Maltese, Slovenian, Turkish, and Ukrainian
+- English EN-GINCO test dataset. The dataset used for evaluation (with label "Other" removed) consists of 258 text instances.
+- X-GINCO test dataset in 10 European languages: Albanian, Catalan, Croatian, Greek, Icelandic, Macedonian, Maltese, Slovenian, Turkish, and Ukrainian. The dataset consists of around 800 texts (approximately 80 texts per language) and 210,000 words.
 
 Both datasets are available upon request - please write to taja.kuzman@ijs.si to get access to private GitHub repositories where they are deposited.
 
@@ -26,7 +26,7 @@ As the EN-GINCO test dataset comprises English instances, the performance of the
 
 The models are evaluated on a multilingual X-GINCO test dataset that comprises instances in Albanian, Catalan, Croatian, Greek, Icelandic, Macedonian, Maltese, Slovenian, Turkish, and Ukrainian, which means that for all languages except Slovenian the models are evaluated in a zero-shot cross-lingual scenario.
 
-![](evaluation-for-the-paper/genre-results-heatmap.png)
+![](evaluation-of-results/genre-results-heatmap.png)
 
 | Model                  |   Slovenian (macro-F1) |   Slovenian (micro-F1) |   Croatian (macro-F1) |   Croatian (micro-F1) |   Macedonian (macro-F1) |   Macedonian (micro-F1) |   Catalan (macro-F1) |   Catalan (micro-F1) |   Ukrainian (macro-F1) |   Ukrainian (micro-F1) |   Icelandic (macro-F1) |   Icelandic (micro-F1) |   Albanian (macro-F1) |   Albanian (micro-F1) |   Turkish (macro-F1) |   Turkish (micro-F1) |   Greek (macro-F1) |   Greek (micro-F1) |   Maltese (macro-F1) |   Maltese (micro-F1) |   English (macro-F1) |   English (micro-F1) |
 |:-----------------------|-----------------------:|-----------------------:|----------------------:|----------------------:|------------------------:|------------------------:|---------------------:|---------------------:|-----------------------:|-----------------------:|-----------------------:|-----------------------:|----------------------:|----------------------:|---------------------:|---------------------:|-------------------:|-------------------:|---------------------:|---------------------:|---------------------:|---------------------:|

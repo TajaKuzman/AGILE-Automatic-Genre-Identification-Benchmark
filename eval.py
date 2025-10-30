@@ -5,9 +5,9 @@ from sklearn.metrics import f1_score
 import argparse
 
 if __name__ == '__main__':
-	parser = argparse.ArgumentParser()
-	parser.add_argument("submission", help="Absolute path to the folder with submission files in JSON format")
-	args = parser.parse_args()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("submission", help="Absolute path to the folder with submission files in JSON format")
+    args = parser.parse_args()
 
 submission_folder = args.submission
 
@@ -71,16 +71,25 @@ for submission_file in submission_files:
             
             # Rename the model
             model_dict = {
-                 "qwen3:32b": "Qwen3 (32B) (zero-shot)",
-                 "llama4:scout": "Llama 4 - Scout (zero-shot)",
-                 "gpt-5": "GPT-5 (gpt-5-2025-08-07) (zero-shot)",
-                 "gpt-5-mini-2025-08-07": "GPT-5-mini (gpt-5-mini-2025-08-07) (zero-shot)",
-                 "gpt-5-nano-2025-08-07": "GPT-5-nano (gpt-5-nano-2025-08-07) (zero-shot)",
-                 "google/gemini-2.5-flash": "Gemini 2.5 Flash (zero-shot)",
-                 "mistralai/mistral-medium-3.1": "Mistral Medium 3.1 (zero-shot)",
-                 "X-GENRE classifier (without Mix label for lower confidence)": "[X-GENRE classifier](https://huggingface.co/classla/xlm-roberta-base-multilingual-text-genre-classifier) (without Mix label for lower confidence)",
+                 "qwen3:32b": "Qwen3",
+                 "llama4:scout": "Llama 4 Scout",
+                 "llama3.3:latest": "Llama 3.3",
+                 "GaMS-27B": "GaMS-Instruct 27B",
+                 "gemma3:27b": "Gemma 3",
+                 "deepseek-r1:14b": "DeekSeek-R1",
+                 "gpt-5-2025-08-07": "GPT-5",
+                 "gpt-5-mini-2025-08-07": "GPT-5-mini",
+                 "gpt-5-nano-2025-08-07": "GPT-5-nano",
+                 "gpt-4o-2024-08-06": "GPT-4o",
+                 "gpt-3.5-turbo-0125": "GPT-3.5-Turbo",
+                 "gpt-4o-mini-2024-07-18": "GPT-4o-mini",
+                 "google/gemini-2.5-flash": "Gemini 2.5 Flash",
+                 "mistralai/mistral-medium-3.1": "Mistral Medium 3.1",
+                 "X-GENRE classifier (without Mix label for lower confidence)": "X-GENRE classifier",
                  "google/gemini-2.5-pro": "Gemini 2.5 Pro"
             }
+
+
             try:
                 model_name = model_dict[model]
             except:
@@ -97,6 +106,15 @@ for submission_file in submission_files:
                 lr = None
 
             test_df = add_predictions_to_dataset(dataset_name, results)
+
+            if dataset_name == "en-ginco":
+                # Remove "Other" so that the comparison between datasets is more fair
+                print(dataset_name)
+                print("Removing 'Other' instances")
+                test_df = test_df[test_df["labels"] != "Other"]
+                print("Dataset shape:")
+                print(test_df.shape)
+
 
             # Calculate overall results
             y_true = test_df["labels"].to_list()
@@ -173,17 +191,17 @@ for dataset in ["x-ginco", "en-ginco"]:
 lang_results_dict = []
 
 for lang in ["Albanian", "Catalan", "Croatian", "English", "Greek", "Icelandic", "Macedonian", "Maltese", "Slovenian", "Turkish", "Ukrainian"]:
-	for result in results_list:
-		cur_result = {"Model": result["Model"], "Test Dataset": result["Test Dataset"], "Language": lang}
-		try:
-			cur_macro = result["Language-Specific Scores"][lang]["Macro F1"]
-			cur_micro = result["Language-Specific Scores"][lang]["Micro F1"]
-			cur_result["Macro F1"] = cur_macro
-			cur_result["Micro F1"] = cur_micro
+    for result in results_list:
+        cur_result = {"Model": result["Model"], "Test Dataset": result["Test Dataset"], "Language": lang}
+        try:
+            cur_macro = result["Language-Specific Scores"][lang]["Macro F1"]
+            cur_micro = result["Language-Specific Scores"][lang]["Micro F1"]
+            cur_result["Macro F1"] = cur_macro
+            cur_result["Micro F1"] = cur_micro
 
-			lang_results_dict.append(cur_result)
-		except:
-			continue
+            lang_results_dict.append(cur_result)
+        except:
+            continue
 
 lang_results_df = pd.DataFrame(lang_results_dict)
 
