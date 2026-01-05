@@ -16,6 +16,8 @@ The test datasets follow the same structure and genre schema as the [X-GENRE dat
 
 The code for all evaluated models is available in the [systems](systems) directory.
 
+Licensed under the MIT License. See LICENSE.
+
 ## Benchmark scores
 
 Benchmark scores were calculated only once per system. Fine-tuning hyperparameters are listed in the json submission files, where applicable.
